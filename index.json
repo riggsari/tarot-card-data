@@ -1,0 +1,1970 @@
+{
+  "metadata": {
+    "source": "https://oraclume.com",
+    "description": "Complete 78-card tarot deck dataset with meanings, keywords, and interpretations",
+    "total_cards": 78,
+    "major_arcana": 22,
+    "minor_arcana": 56,
+    "license": "CC0 1.0 Universal (Public Domain)",
+    "last_updated": "2026-05-28"
+  },
+  "cards": [
+    {
+      "id": 0,
+      "name": "The Fool",
+      "number": 0,
+      "arcana": "Major",
+      "keywords": [
+        "beginnings",
+        "innocence",
+        "spontaneity",
+        "free spirit",
+        "adventure"
+      ],
+      "upright": {
+        "meaning": "New beginnings, fresh start, spontaneity, living in the moment, trusting the universe. The Fool represents the pure potential of embarking on an unknown journey with optimism.",
+        "love": "A new romantic adventure or taking a chance on love. Being open and vulnerable with someone new.",
+        "career": "Starting a new job, launching a venture, or taking a creative risk. Fresh approach to work.",
+        "finance": "Unplanned spending or financial adventure. Caution needed before major investments."
+      },
+      "reversed": {
+        "meaning": "Recklessness, risk-taking without thought, naivety, holding back due to fear, missed opportunities.",
+        "love": "Fear of commitment or jumping into relationships too quickly without thinking.",
+        "career": "Quitting impulsively or being too afraid to take a necessary career risk.",
+        "finance": "Financial recklessness or paralysis in making money decisions."
+      },
+      "element": "Air",
+      "astrological": "Uranus",
+      "yes_no": "Yes — take the leap"
+    },
+    {
+      "id": 1,
+      "name": "The Magician",
+      "number": 1,
+      "arcana": "Major",
+      "keywords": [
+        "willpower",
+        "skill",
+        "manifestation",
+        "resourcefulness",
+        "power"
+      ],
+      "upright": {
+        "meaning": "Manifestation, resourcefulness, inspired action. You have all the tools you need. The Magician represents the ability to turn ideas into reality through willpower and focus.",
+        "love": "Charisma and attraction. A powerful connection where both partners bring their best selves.",
+        "career": "Confidence in your skills. A time to take initiative and showcase your talents.",
+        "finance": "Resourcefulness in money matters. Good time to start a new financial venture."
+      },
+      "reversed": {
+        "meaning": "Manipulation, untapped potential, trickery, wasted talent, cunning.",
+        "love": "Game-playing or manipulation. Someone may be hiding their true intentions.",
+        "career": "Underutilized skills or someone taking credit for your work.",
+        "finance": "Scams or financial manipulation. Check the fine print."
+      },
+      "element": "Fire",
+      "astrological": "Mercury",
+      "yes_no": "Yes — take decisive action"
+    },
+    {
+      "id": 2,
+      "name": "The High Priestess",
+      "number": 2,
+      "arcana": "Major",
+      "keywords": [
+        "intuition",
+        "mystery",
+        "subconscious",
+        "inner knowledge",
+        "wisdom"
+      ],
+      "upright": {
+        "meaning": "Trust your intuition, look beneath the surface, silence is wisdom. The High Priestess represents the bridge between conscious and unconscious mind. Listen to your inner voice.",
+        "love": "Deep intuitive connection. Things are not yet revealed — patience and trust in the process.",
+        "career": "Trust your gut on a business decision. Hidden information may come to light.",
+        "finance": "Follow your intuition about investments. Not everything is as it seems on paper."
+      },
+      "reversed": {
+        "meaning": "Ignoring intuition, secrets revealed, withdrawal, superficial knowledge.",
+        "love": "Secrets in a relationship or denying your true feelings about someone.",
+        "career": "Ignoring workplace politics or refusing to listen to your instincts about a project.",
+        "finance": "Missing subtle financial cues or keeping your head in the sand about money issues."
+      },
+      "element": "Water",
+      "astrological": "Moon",
+      "yes_no": "Wait — the answer is not yet revealed"
+    },
+    {
+      "id": 3,
+      "name": "The Empress",
+      "number": 3,
+      "arcana": "Major",
+      "keywords": [
+        "femininity",
+        "abundance",
+        "nature",
+        "nurturing",
+        "fertility"
+      ],
+      "upright": {
+        "meaning": "Abundance, fertility, beauty, nurturing, connection to nature. The Empress embodies the Divine Feminine — creative abundance, growth, and nurturing energy.",
+        "love": "A relationship blooming and growing. Fertility, pregnancy, or deep emotional nurturing.",
+        "career": "Creative projects flourishing. Growth and expansion in business.",
+        "finance": "Financial abundance and comfort. Wealth flowing naturally."
+      },
+      "reversed": {
+        "meaning": "Creative block, dependence, neglect of self-care, emptiness.",
+        "love": "Smothering or codependency. Difficulty nurturing or being nurtured.",
+        "career": "Stalled creative projects or burnout from giving too much.",
+        "finance": "Over-spending on comfort or neglecting financial health."
+      },
+      "element": "Earth",
+      "astrological": "Venus",
+      "yes_no": "Yes — abundance is flowing"
+    },
+    {
+      "id": 4,
+      "name": "The Emperor",
+      "number": 4,
+      "arcana": "Major",
+      "keywords": [
+        "authority",
+        "structure",
+        "stability",
+        "power",
+        "protection"
+      ],
+      "upright": {
+        "meaning": "Authority, structure, discipline, stability, leadership. The Emperor represents order, rules, and the masculine principle of building solid foundations through discipline.",
+        "love": "Stable committed relationship. Need for structure and clear boundaries.",
+        "career": "Leadership role, promotion, or authority figure. Time to take charge.",
+        "finance": "Financial stability through discipline. Good time to set budgets and long-term plans."
+      },
+      "reversed": {
+        "meaning": "Rigidity, excessive control, tyranny, lack of discipline, power struggles.",
+        "love": "Controlling partner or power struggles in the relationship.",
+        "career": "Micromanagement or rebellion against authority. Outdated systems.",
+        "finance": "Too rigid with money or financial control issues in relationships."
+      },
+      "element": "Fire",
+      "astrological": "Aries",
+      "yes_no": "Yes — with structure and discipline"
+    },
+    {
+      "id": 5,
+      "name": "The Hierophant",
+      "number": 5,
+      "arcana": "Major",
+      "keywords": [
+        "tradition",
+        "spiritual guidance",
+        "education",
+        "conformity",
+        "belief"
+      ],
+      "upright": {
+        "meaning": "Spiritual wisdom, tradition, conformity, education, guidance from institutions. The Hierophant represents established belief systems and traditional knowledge.",
+        "love": "Traditional relationship values, commitment through marriage or ceremony.",
+        "career": "Mentorship, training, working within established systems and protocols.",
+        "finance": "Traditional financial advice. Consulting an expert or following proven strategies."
+      },
+      "reversed": {
+        "meaning": "Rebellion, unorthodox approaches, questioning authority, non-conformity.",
+        "love": "Breaking traditions in relationships. Non-traditional partnership structures.",
+        "career": "Challenging workplace norms or leaving a traditional career path.",
+        "finance": "Questioning conventional financial wisdom. Alternative investments."
+      },
+      "element": "Earth",
+      "astrological": "Taurus",
+      "yes_no": "Yes — follow established wisdom"
+    },
+    {
+      "id": 6,
+      "name": "The Lovers",
+      "number": 6,
+      "arcana": "Major",
+      "keywords": [
+        "love",
+        "harmony",
+        "relationships",
+        "choices",
+        "alignment"
+      ],
+      "upright": {
+        "meaning": "Love, harmony, meaningful connections, choices aligned with values. The Lovers represent a crossroads where heart and values guide the decision.",
+        "love": "Deep romantic connection, soulmate energy. A significant relationship choice.",
+        "career": "Choosing a career path that aligns with your values. Partnership opportunities.",
+        "finance": "Financial decisions that reflect your values. Joint financial ventures."
+      },
+      "reversed": {
+        "meaning": "Disconnection, imbalance, misalignment of values, broken relationships.",
+        "love": "Relationship challenges, breakups, or values not aligning between partners.",
+        "career": "Career choice driven by pressure rather than passion.",
+        "finance": "Financial decisions that conflict with your values."
+      },
+      "element": "Air",
+      "astrological": "Gemini",
+      "yes_no": "Yes — follow your heart"
+    },
+    {
+      "id": 7,
+      "name": "The Chariot",
+      "number": 7,
+      "arcana": "Major",
+      "keywords": [
+        "willpower",
+        "determination",
+        "victory",
+        "control",
+        "drive"
+      ],
+      "upright": {
+        "meaning": "Willpower, determination, victory through focused effort, overcoming opposition. The Chariot represents triumph through discipline and control.",
+        "love": "Taking control of relationship direction. Strong determination to make it work.",
+        "career": "Career victory through hard work. Ambitious drive leading to success.",
+        "finance": "Financial goals achieved through discipline and determination."
+      },
+      "reversed": {
+        "meaning": "Lack of direction, aggression, obstacles, loss of control, willpower failure.",
+        "love": "Relationship power struggles or losing direction in the partnership.",
+        "career": "Burnout from pushing too hard or losing sight of goals.",
+        "finance": "Reckless financial moves or losing control of budget."
+      },
+      "element": "Water",
+      "astrological": "Cancer",
+      "yes_no": "Yes — charge forward with confidence"
+    },
+    {
+      "id": 8,
+      "name": "Strength",
+      "number": 8,
+      "arcana": "Major",
+      "keywords": [
+        "courage",
+        "inner strength",
+        "compassion",
+        "patience",
+        "gentle power"
+      ],
+      "upright": {
+        "meaning": "Inner strength, courage, compassion, patience, gentle control. True power comes from gentleness and inner fortitude, not domination.",
+        "love": "Gentle strength in relationships. Patience and understanding with your partner.",
+        "career": "Courage to face workplace challenges. Leading with compassion and patience.",
+        "finance": "Financial patience. The discipline to stay the course with long-term plans."
+      },
+      "reversed": {
+        "meaning": "Self-doubt, insecurity, weakness, lack of courage, feeling overwhelmed.",
+        "love": "Losing patience in relationships or feeling emotionally drained.",
+        "career": "Imposter syndrome or feeling unable to handle workplace pressure.",
+        "finance": "Anxiety about money leading to poor decisions."
+      },
+      "element": "Fire",
+      "astrological": "Leo",
+      "yes_no": "Yes — trust your inner strength"
+    },
+    {
+      "id": 9,
+      "name": "The Hermit",
+      "number": 9,
+      "arcana": "Major",
+      "keywords": [
+        "introspection",
+        "solitude",
+        "wisdom",
+        "reflection",
+        "inner guidance"
+      ],
+      "upright": {
+        "meaning": "Solitude, introspection, inner guidance, soul-searching. Sometimes the wisest choice is to withdraw and seek answers within.",
+        "love": "Time alone needed in relationships. A period of reflection before committing.",
+        "career": "Working independently or pursuing knowledge. A sabbatical or research phase.",
+        "finance": "Careful financial planning and conservative money management."
+      },
+      "reversed": {
+        "meaning": "Isolation, loneliness, withdrawal from others, refusing help.",
+        "love": "Emotional withdrawal from partner. Too much time alone.",
+        "career": "Overworking in isolation or refusing to collaborate.",
+        "finance": "Being too isolated with financial decisions. Need for advice."
+      },
+      "element": "Earth",
+      "astrological": "Virgo",
+      "yes_no": "Wait — seek inner guidance first"
+    },
+    {
+      "id": 10,
+      "name": "Wheel of Fortune",
+      "number": 10,
+      "arcana": "Major",
+      "keywords": [
+        "change",
+        "cycles",
+        "destiny",
+        "turning point",
+        "luck"
+      ],
+      "upright": {
+        "meaning": "Change, cycles, destiny, karma, turning point. Life moves in cycles — what goes around comes around. Embrace change as a natural force.",
+        "love": "Fate bringing people together. Relationship going through a cycle of change.",
+        "career": "Career turning point, promotion, or unexpected opportunity.",
+        "finance": "Financial cycles turning upward. Good fortune in money matters."
+      },
+      "reversed": {
+        "meaning": "Bad luck, resistance to change, broken cycles, lack of control.",
+        "love": "Relationship feeling stuck or going in circles. Bad timing.",
+        "career": "Resisting necessary workplace changes. Feeling stuck.",
+        "finance": "Financial downturn or unexpected losses."
+      },
+      "element": "Fire",
+      "astrological": "Jupiter",
+      "yes_no": "Yes — change is coming, embrace it"
+    },
+    {
+      "id": 11,
+      "name": "Justice",
+      "number": 11,
+      "arcana": "Major",
+      "keywords": [
+        "fairness",
+        "truth",
+        "law",
+        "accountability",
+        "balance"
+      ],
+      "upright": {
+        "meaning": "Justice, fairness, truth, cause and effect, legal matters. The scales must be balanced. Honesty and accountability will prevail.",
+        "love": "Fairness in relationships. Honest communication and accountability.",
+        "career": "Legal contracts, fair treatment at work. Truth about a business situation.",
+        "finance": "Fair settlements, tax matters, legal financial decisions."
+      },
+      "reversed": {
+        "meaning": "Injustice, dishonesty, lack of accountability, legal troubles.",
+        "love": "Unfair treatment in relationship. Avoiding accountability.",
+        "career": "Workplace injustice or legal issues. Dishonest colleagues.",
+        "finance": "Financial fraud or unfair contracts."
+      },
+      "element": "Air",
+      "astrological": "Libra",
+      "yes_no": "Yes — truth will prevail"
+    },
+    {
+      "id": 12,
+      "name": "The Hanged Man",
+      "number": 12,
+      "arcana": "Major",
+      "keywords": [
+        "surrender",
+        "pause",
+        "new perspective",
+        "sacrifice",
+        "letting go"
+      ],
+      "upright": {
+        "meaning": "Pause, surrender, new perspective, letting go, sacrifice. Sometimes the best action is non-action. See the world from a different angle.",
+        "love": "Taking a relationship pause. Seeing your partnership from a new perspective.",
+        "career": "Waiting period in career. A necessary pause before the next move.",
+        "finance": "Financial holding pattern. Not the time for major money moves."
+      },
+      "reversed": {
+        "meaning": "Stalling, resistance to sacrifice, delay, stalling, martyrdom.",
+        "love": "Staying in a relationship that needs to end. Martyr mentality.",
+        "career": "Delays at work or refusing to let go of a failing project.",
+        "finance": "Financial limbo. Unwilling to make necessary cutbacks."
+      },
+      "element": "Water",
+      "astrological": "Neptune",
+      "yes_no": "Wait — pause and reflect"
+    },
+    {
+      "id": 13,
+      "name": "Death",
+      "number": 13,
+      "arcana": "Major",
+      "keywords": [
+        "transformation",
+        "endings",
+        "rebirth",
+        "change",
+        "release"
+      ],
+      "upright": {
+        "meaning": "Transformation, endings leading to new beginnings, release of the old, metamorphosis. Death rarely means physical death — it represents profound inner change.",
+        "love": "Ending of a relationship cycle to make way for something new. Profound personal transformation.",
+        "career": "Job ending or career transformation. Old role dying to make way for new growth.",
+        "finance": "Financial transformation. Closing old accounts and starting fresh."
+      },
+      "reversed": {
+        "meaning": "Resistance to change, stagnation, repeating patterns, refusing to let go.",
+        "love": "Holding onto a dead relationship. Fear of moving on.",
+        "career": "Staying in a dead-end job. Fear of change holding you back.",
+        "finance": "Financial stagnation. Refusing to change money habits."
+      },
+      "element": "Water",
+      "astrological": "Scorpio",
+      "yes_no": "Yes — transformation is necessary"
+    },
+    {
+      "id": 14,
+      "name": "Temperance",
+      "number": 14,
+      "arcana": "Major",
+      "keywords": [
+        "balance",
+        "moderation",
+        "patience",
+        "harmony",
+        "healing"
+      ],
+      "upright": {
+        "meaning": "Balance, moderation, patience, finding middle ground, healing, flow. Life is about integration and harmony — bring opposing forces together.",
+        "love": "Balanced healthy relationship. Patience and compromise with partner.",
+        "career": "Work-life balance. Steady progress through consistent effort.",
+        "finance": "Balanced financial approach. Saving and spending in harmony."
+      },
+      "reversed": {
+        "meaning": "Imbalance, excess, extremes, lack of harmony, impatience.",
+        "love": "Relationship imbalance. One person giving too much or taking too much.",
+        "career": "Overwork or underwork. Lack of moderation in professional life.",
+        "finance": "Extreme spending or extreme frugality. Imbalance."
+      },
+      "element": "Fire",
+      "astrological": "Sagittarius",
+      "yes_no": "Yes — find balance and harmony"
+    },
+    {
+      "id": 15,
+      "name": "The Devil",
+      "number": 15,
+      "arcana": "Major",
+      "keywords": [
+        "bondage",
+        "addiction",
+        "materialism",
+        "shadow self",
+        "trapped"
+      ],
+      "upright": {
+        "meaning": "Bondage, addiction, materialism, playfulness with dark edges. The chains are self-imposed. Recognize what holds you captive and reclaim your freedom.",
+        "love": "Toxic relationships, codependency, or intense sexual attraction that binds.",
+        "career": "Feeling trapped at work. Unhealthy attachment to money or status.",
+        "finance": "Financial bondage through debt. Material overconsumption."
+      },
+      "reversed": {
+        "meaning": "Release, breaking free, reclaiming power, overcoming addiction.",
+        "love": "Breaking free from a toxic relationship. Reclaiming personal power.",
+        "career": "Leaving a toxic workplace. Breaking free from materialism.",
+        "finance": "Breaking debt cycles. Financial detox and fresh start."
+      },
+      "element": "Earth",
+      "astrological": "Capricorn",
+      "yes_no": "No — examine what holds you back"
+    },
+    {
+      "id": 16,
+      "name": "The Tower",
+      "number": 16,
+      "arcana": "Major",
+      "keywords": [
+        "sudden change",
+        "upheaval",
+        "revelation",
+        "crisis",
+        "awakening"
+      ],
+      "upright": {
+        "meaning": "Sudden upheaval, revelation, disruption, awakening. The Tower destroys false structures to make way for truth. Painful but necessary.",
+        "love": "Sudden breakup or relationship revelation. Shocking truth coming to light.",
+        "career": "Unexpected job loss or company restructuring. A shake-up that needed to happen.",
+        "finance": "Sudden financial loss or unexpected expense. A financial wake-up call."
+      },
+      "reversed": {
+        "meaning": "Avoiding disaster, resistance to change, delaying the inevitable, personal crisis.",
+        "love": "Trying to prevent relationship collapse. Avoiding the truth.",
+        "career": "Delaying necessary career change. Resisting unavoidable restructuring.",
+        "finance": "Avoiding financial reality. Preventing necessary money changes."
+      },
+      "element": "Fire",
+      "astrological": "Mars",
+      "yes_no": "No — prepare for disruption"
+    },
+    {
+      "id": 17,
+      "name": "The Star",
+      "number": 17,
+      "arcana": "Major",
+      "keywords": [
+        "hope",
+        "inspiration",
+        "serenity",
+        "purpose",
+        "renewal"
+      ],
+      "upright": {
+        "meaning": "Hope, inspiration, healing, renewal, serenity, purpose. After the storm comes peace. Trust in the universe and your path forward.",
+        "love": "Healing after heartbreak. Hopeful energy for new love. Spiritual connection.",
+        "career": "Finding your true calling. Creative inspiration. Career aligned with purpose.",
+        "finance": "Financial hope after hardship. Generosity and trusting abundance."
+      },
+      "reversed": {
+        "meaning": "Despair, lack of faith, discouragement, hopelessness, uninspired.",
+        "love": "Loss of hope in love. Feeling disconnected from partner.",
+        "career": "Lack of inspiration at work. Feeling your work lacks meaning.",
+        "finance": "Financial discouragement. Feeling hopeless about money."
+      },
+      "element": "Air",
+      "astrological": "Aquarius",
+      "yes_no": "Yes — have faith in the universe"
+    },
+    {
+      "id": 18,
+      "name": "The Moon",
+      "number": 18,
+      "arcana": "Major",
+      "keywords": [
+        "illusion",
+        "fear",
+        "uncertainty",
+        "subconscious",
+        "intuition"
+      ],
+      "upright": {
+        "meaning": "Illusion, fear, anxiety, subconscious, uncertainty. Things are not as they seem. Trust your intuition but beware of deception and delusion.",
+        "love": "Uncertainty in love. Hidden truths or deception. Trust your instincts.",
+        "career": "Workplace confusion. Hidden agendas or unclear job security.",
+        "finance": "Financial uncertainty. Hidden fees or unclear investment situations."
+      },
+      "reversed": {
+        "meaning": "Releasing fear, clarity emerging, understanding, overcoming anxiety.",
+        "love": "Truth coming to light in relationships. Releasing fears about love.",
+        "career": "Clarity emerging at work. Overcoming workplace anxiety.",
+        "finance": "Money fears subsiding. Clarity in financial matters."
+      },
+      "element": "Water",
+      "astrological": "Pisces",
+      "yes_no": "Wait — things are unclear, seek truth"
+    },
+    {
+      "id": 19,
+      "name": "The Sun",
+      "number": 19,
+      "arcana": "Major",
+      "keywords": [
+        "joy",
+        "success",
+        "vitality",
+        "celebration",
+        "confidence"
+      ],
+      "upright": {
+        "meaning": "Joy, success, vitality, celebration, confidence, achievement. The Sun is one of the most positive cards — happiness, success, and fulfillment await.",
+        "love": "Joyful relationship. Celebration of love. Confidence in partnership.",
+        "career": "Career success and recognition. Achieving goals with confidence.",
+        "finance": "Financial success and prosperity. Abundant energy."
+      },
+      "reversed": {
+        "meaning": "Temporary setback, lack of joy, clouded optimism, negativity.",
+        "love": "Relationship happiness blocked. Inner child wounds affecting love.",
+        "career": "Career disappointment. Success delayed but not denied.",
+        "finance": "Temporary financial setback. Optimism returning."
+      },
+      "element": "Fire",
+      "astrological": "Sun",
+      "yes_no": "Yes — absolute yes!"
+    },
+    {
+      "id": 20,
+      "name": "Judgement",
+      "number": 20,
+      "arcana": "Major",
+      "keywords": [
+        "judgement",
+        "rebirth",
+        "inner calling",
+        "accountability",
+        "absolution"
+      ],
+      "upright": {
+        "meaning": "Judgement, rebirth, inner calling, absolution, evaluation. A moment of reckoning — be honest with yourself and answer your inner calling.",
+        "love": "Relationship evaluation. Renewal of vows or recommitting to love.",
+        "career": "Career calling. A major evaluation of professional direction.",
+        "finance": "Financial judgment. Reviewing past money decisions and making better choices."
+      },
+      "reversed": {
+        "meaning": "Self-doubt, harsh self-judgment, refusing to learn from past, ignoring calling.",
+        "love": "Holding onto past relationship guilt. Refusing to forgive yourself or partner.",
+        "career": "Ignoring your true career calling. Fear of change.",
+        "finance": "Repeating the same money mistakes. Self-sabotage."
+      },
+      "element": "Fire",
+      "astrological": "Pluto",
+      "yes_no": "Yes — answer the call"
+    },
+    {
+      "id": 21,
+      "name": "The World",
+      "number": 21,
+      "arcana": "Major",
+      "keywords": [
+        "completion",
+        "accomplishment",
+        "fulfillment",
+        "wholeness",
+        "travel"
+      ],
+      "upright": {
+        "meaning": "Completion, accomplishment, fulfillment, wholeness, integration. A major cycle ends successfully. You've reached your goal — celebrate and prepare for the next journey.",
+        "love": "Soulmate energy. Complete and fulfilling partnership. Relationship milestone.",
+        "career": "Major career achievement. Project completion. Global recognition.",
+        "finance": "Financial completion. Goals achieved. Cycle of prosperity closing successfully."
+      },
+      "reversed": {
+        "meaning": "Incompletion, delays, stagnation, shortcuts, lack of closure.",
+        "love": "Relationship not ready for commitment. Delays in partnership goals.",
+        "career": "Stalled career progress. Project not reaching completion.",
+        "finance": "Delayed financial goals. Incomplete financial plans."
+      },
+      "element": "Earth",
+      "astrological": "Saturn",
+      "yes_no": "Yes — a cycle completes successfully"
+    },
+    {
+      "id": 22,
+      "name": "Ace of Wands",
+      "number": "Ace",
+      "keywords": [
+        "new beginning",
+        "inspiration",
+        "creative spark",
+        "opportunity",
+        "potential"
+      ],
+      "upright": {
+        "meaning": "New creative spark, inspiration, fresh start, exciting opportunity. The Ace of Wands brings the fire of passion and the energy to start something new.",
+        "love": "New romantic spark. Exciting beginning or reigniting passion.",
+        "career": "New business idea, creative project, or career opportunity taking shape."
+      },
+      "reversed": {
+        "meaning": "Delays in starting, creative blocks, lack of motivation, missed opportunity.",
+        "love": "Romance that fizzles out. Lack of passion or delayed connection.",
+        "career": "Creative block or missed career opportunity. Idea without execution."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 23,
+      "name": "Two of Wands",
+      "number": "Two",
+      "keywords": [
+        "future planning",
+        "progress",
+        "decisions",
+        "discovery",
+        "ambition"
+      ],
+      "upright": {
+        "meaning": "Planning for the future, making decisions, discovery, leaving comfort zone. Your world is expanding and you must choose your path.",
+        "love": "Planning a future together. Decisions about relationship direction.",
+        "career": "Expanding business or career horizons. Planning next steps."
+      },
+      "reversed": {
+        "meaning": "Fear of change, poor planning, lack of foresight, indecision.",
+        "love": "Relationship uncertainty. Fear of committing to future plans.",
+        "career": "Lack of career planning. Fear of expanding horizons."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 24,
+      "name": "Three of Wands",
+      "number": "Three",
+      "keywords": [
+        "expansion",
+        "progress",
+        "foresight",
+        "exploration",
+        "growth"
+      ],
+      "upright": {
+        "meaning": "Expansion, progress, planning ahead, exploration. Your plans are gaining momentum — prepare for growth and new horizons.",
+        "love": "Long-distance relationship. Relationship expanding and progressing well.",
+        "career": "Business expansion. International opportunities. Progress on long-term plans."
+      },
+      "reversed": {
+        "meaning": "Obstacles to progress, delays, frustration, lack of direction.",
+        "love": "Delays in relationship progression. Frustration with pace.",
+        "career": "Obstacles in expansion plans. Delayed international projects."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 25,
+      "name": "Four of Wands",
+      "number": "Four",
+      "keywords": [
+        "celebration",
+        "homecoming",
+        "harmony",
+        "community",
+        "stability"
+      ],
+      "upright": {
+        "meaning": "Celebration, homecoming, harmony, stability, joy. A milestone reached — time to gather with loved ones and celebrate your accomplishments.",
+        "love": "Engagement, marriage, or home together. Celebrating relationship milestones.",
+        "career": "Project completion celebration. Team harmony and workplace stability."
+      },
+      "reversed": {
+        "meaning": "Lack of harmony, canceled celebrations, feeling unwelcome, instability.",
+        "love": "Relationship tension. Canceled celebrations or home instability.",
+        "career": "Workplace discord. Team conflicts or canceled success celebrations."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 26,
+      "name": "Five of Wands",
+      "number": "Five",
+      "keywords": [
+        "competition",
+        "conflict",
+        "tension",
+        "rivalry",
+        "disagreement"
+      ],
+      "upright": {
+        "meaning": "Competition, conflict, rivalry, tension, disagreements. Healthy competition can push growth, but watch for unnecessary battles.",
+        "love": "Arguments and conflicts. Competitive energy in relationship.",
+        "career": "Workplace competition. Rivalry among colleagues. Disagreements."
+      },
+      "reversed": {
+        "meaning": "Avoiding conflict, cooperation, finding common ground, peacemaking.",
+        "love": "Moving past arguments. Conflict resolution.",
+        "career": "Collaboration replacing competition. End of workplace conflict."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 27,
+      "name": "Six of Wands",
+      "number": "Six",
+      "keywords": [
+        "victory",
+        "recognition",
+        "achievement",
+        "public success",
+        "praise"
+      ],
+      "upright": {
+        "meaning": "Victory, recognition, praise, public success, confidence. Your hard work pays off and others acknowledge your achievements.",
+        "love": "Relationship recognized and celebrated. Public declarations of love.",
+        "career": "Recognition at work. Promotion or achievement acknowledged by others."
+      },
+      "reversed": {
+        "meaning": "Lack of recognition, ego, fall from grace, failure, arrogance.",
+        "love": "Seeking external validation in relationship. Ego issues.",
+        "career": "Recognition denied or not getting credit. Ego deflation."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 28,
+      "name": "Seven of Wands",
+      "number": "Seven",
+      "keywords": [
+        "defense",
+        "standing ground",
+        "perseverance",
+        "challenge",
+        "protection"
+      ],
+      "upright": {
+        "meaning": "Defending your position, standing your ground, perseverance. You face opposition but have the strength and conviction to hold your position.",
+        "love": "Defending the relationship against outside influence. Protecting boundaries.",
+        "career": "Standing your ground at work. Defending your ideas."
+      },
+      "reversed": {
+        "meaning": "Giving up, overwhelmed, losing ground, feeling defensive.",
+        "love": "Feeling defensive in relationship. Overwhelmed by challenges.",
+        "career": "Losing your position at work. Overwhelmed by opposition."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 29,
+      "name": "Eight of Wands",
+      "number": "Eight",
+      "keywords": [
+        "speed",
+        "movement",
+        "progress",
+        "action",
+        "rapid change"
+      ],
+      "upright": {
+        "meaning": "Speed, rapid progress, action, momentum, swift change. Things are moving fast — stay focused and ride the momentum.",
+        "love": "Relationship moving quickly. Messages arriving. Exciting pace.",
+        "career": "Fast-paced work progress. Multiple projects moving at once."
+      },
+      "reversed": {
+        "meaning": "Delays, slowdown, frustration, lack of momentum, stagnation.",
+        "love": "Slow replies or communication delays. Relationship stalling.",
+        "career": "Project delays. Work momentum slowing."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 30,
+      "name": "Nine of Wands",
+      "number": "Nine",
+      "keywords": [
+        "resilience",
+        "persistence",
+        "boundaries",
+        "last stand",
+        "fatigue"
+      ],
+      "upright": {
+        "meaning": "Resilience, persistence, guarding boundaries, last stand. You're almost there — don't give up even if you're tired. One final push.",
+        "love": "Protecting relationship boundaries. Persistence through challenges.",
+        "career": "Almost at the finish line. Fatigue from prolonged effort."
+      },
+      "reversed": {
+        "meaning": "Exhaustion, giving up, burnout, feeling defensive, paranoia.",
+        "love": "Relationship burnout. Feeling like giving up.",
+        "career": "Work burnout. Ready to quit before reaching the goal."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 31,
+      "name": "Ten of Wands",
+      "number": "Ten",
+      "keywords": [
+        "burden",
+        "responsibility",
+        "hard work",
+        "overload",
+        "stress"
+      ],
+      "upright": {
+        "meaning": "Burden, overload, heavy responsibility, hard work. You're carrying too much — it's time to delegate or ask for help.",
+        "love": "Relationship feeling like a burden. Carrying too much alone.",
+        "career": "Work overload. Too many responsibilities. Burnout warning."
+      },
+      "reversed": {
+        "meaning": "Release, delegation, lightening the load, setting down burdens.",
+        "love": "Sharing relationship responsibilities. Lightening load.",
+        "career": "Delegating tasks. Reducing workload. Learning to say no."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 32,
+      "name": "Page of Wands",
+      "number": "Page",
+      "keywords": [
+        "enthusiasm",
+        "exploration",
+        "new ideas",
+        "curiosity",
+        "free spirit"
+      ],
+      "upright": {
+        "meaning": "Enthusiasm, exploration, new ideas, creative spark, youthful energy. A fresh perspective and passion for something new.",
+        "love": "Playful romance. A new crush or exciting flirtation.",
+        "career": "New project or idea. Exploring creative career options."
+      },
+      "reversed": {
+        "meaning": "Lack of direction, setbacks, immaturity, insecurity.",
+        "love": "Immature approach to love. Crush fading. Lack of follow-through.",
+        "career": "Creative block. Project idea not taking off."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 33,
+      "name": "Knight of Wands",
+      "number": "Knight",
+      "keywords": [
+        "adventure",
+        "impulsiveness",
+        "energy",
+        "passion",
+        "bold action"
+      ],
+      "upright": {
+        "meaning": "Adventure, action, impulsiveness, passion, bold moves. Charging toward your goals with fiery energy — but check before you leap.",
+        "love": "Bold romantic pursuit. Exciting but potentially short-lived passion.",
+        "career": "Starting a venture with enthusiasm. Fast action."
+      },
+      "reversed": {
+        "meaning": "Recklessness, impulsiveness, burnout, scattered energy.",
+        "love": "Moving too fast in romance. Reckless relationship decisions.",
+        "career": "Hasty business decisions. Burnout from over-committing."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 34,
+      "name": "Queen of Wands",
+      "number": "Queen",
+      "keywords": [
+        "confidence",
+        "determination",
+        "warmth",
+        "charisma",
+        "boldness"
+      ],
+      "upright": {
+        "meaning": "Confidence, charisma, warmth, boldness, creative leadership. Own your power with grace and inspire others through your passionate spirit.",
+        "love": "Confident passionate partner. Warm charismatic love.",
+        "career": "Creative leadership. Inspiring others with vision."
+      },
+      "reversed": {
+        "meaning": "Jealousy, insecurity, selfishness, demanding, temperamental.",
+        "love": "Jealous partner. Relationship insecurity. Temper issues.",
+        "career": "Creative burnout. Demanding leader. Selfish behavior."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 35,
+      "name": "King of Wands",
+      "number": "King",
+      "keywords": [
+        "leadership",
+        "vision",
+        "entrepreneurship",
+        "honor",
+        "bold decision"
+      ],
+      "upright": {
+        "meaning": "Natural-born leader, visionary, entrepreneur, bold decision-maker. The King of Wands leads with confidence, vision, and integrity.",
+        "love": "Bold confident partner. Leadership in relationship.",
+        "career": "Entrepreneurial vision. CEO energy. Leading with confidence."
+      },
+      "reversed": {
+        "meaning": "Arrogance, ruthlessness, unrealistic expectations, tyranny.",
+        "love": "Domineering partner. Relationship ruled by ego.",
+        "career": "Overbearing leadership. Unrealistic business expectations."
+      },
+      "suit": "Wands",
+      "element": "Fire"
+    },
+    {
+      "id": 36,
+      "name": "Ace of Cups",
+      "number": "Ace",
+      "keywords": [
+        "new love",
+        "emotional new beginning",
+        "intuition",
+        "compassion",
+        "overflowing feelings"
+      ],
+      "upright": {
+        "meaning": "New love, emotional awakening, compassion, overflowing feelings. The Ace of Cups opens the heart to receive and give love freely.",
+        "love": "New relationship, deepening emotional connection, falling in love.",
+        "career": "Work you're passionate about. Creative inspiration. Emotional fulfillment at work."
+      },
+      "reversed": {
+        "meaning": "Emotional emptiness, blocked feelings, repressed emotions, creative block.",
+        "love": "Emotional unavailability. Blocked feelings. Love not flowing.",
+        "career": "Work lacking emotional fulfillment. Creative block."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 37,
+      "name": "Two of Cups",
+      "number": "Two",
+      "keywords": [
+        "partnership",
+        "connection",
+        "mutual attraction",
+        "unity",
+        "love"
+      ],
+      "upright": {
+        "meaning": "Partnership, mutual attraction, connection, unity, balanced love. A beautiful bond forms between two people who see each other clearly.",
+        "love": "Deep mutual connection. Soulmate energy. Partnership forming.",
+        "career": "Business partnership. Meaningful collaboration."
+      },
+      "reversed": {
+        "meaning": "Imbalance, broken connection, separation, distrust, breakup.",
+        "love": "Breakup, separation, or relationship imbalance.",
+        "career": "Broken business partnership. Failed collaboration."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 38,
+      "name": "Three of Cups",
+      "number": "Three",
+      "keywords": [
+        "celebration",
+        "friendship",
+        "community",
+        "joy",
+        "socializing"
+      ],
+      "upright": {
+        "meaning": "Celebration, friendship, community, joy, social gatherings. Good times with friends and loved ones — celebrate the bonds that nourish you.",
+        "love": "Joyful social connection. Good times with partner and friends.",
+        "career": "Team celebration. Collaborative success. Positive work culture."
+      },
+      "reversed": {
+        "meaning": "Overindulgence, gossip, exclusion, social drama, loneliness.",
+        "love": "Social drama affecting relationship. Overindulgence.",
+        "career": "Office gossip. Exclusion from team activities."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 39,
+      "name": "Four of Cups",
+      "number": "Four",
+      "keywords": [
+        "apathy",
+        "contemplation",
+        "discontent",
+        "meditation",
+        "boredom"
+      ],
+      "upright": {
+        "meaning": "Apathy, contemplation, discontent, boredom. What's being offered isn't satisfying. Look inward to understand what you truly need.",
+        "love": "Apathy in relationship. Taking partner for granted.",
+        "career": "Boredom at work. Dissatisfied with current position."
+      },
+      "reversed": {
+        "meaning": "New perspective, acceptance, renewal, seizing opportunity.",
+        "love": "Renewed interest in relationship. Noticing what you had.",
+        "career": "New opportunity noticed. Fresh perspective on work."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 40,
+      "name": "Five of Cups",
+      "number": "Five",
+      "keywords": [
+        "loss",
+        "grief",
+        "regret",
+        "disappointment",
+        "mourning"
+      ],
+      "upright": {
+        "meaning": "Loss, grief, regret, disappointment, focusing on what's lost. It's okay to grieve, but don't miss what remains — two cups are still standing.",
+        "love": "Heartbreak, loss, or regret in love. Grieving a relationship.",
+        "career": "Career disappointment. Loss of a business opportunity."
+      },
+      "reversed": {
+        "meaning": "Acceptance, moving on, finding peace, forgiveness.",
+        "love": "Healing after heartbreak. Acceptance and moving forward.",
+        "career": "Recovery from career setback. Finding new direction."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 41,
+      "name": "Six of Cups",
+      "number": "Six",
+      "keywords": [
+        "nostalgia",
+        "childhood",
+        "innocence",
+        "happy memories",
+        "reunion"
+      ],
+      "upright": {
+        "meaning": "Nostalgia, childhood memories, innocence, happy reunions. Looking back with warmth — but remember to live in the present.",
+        "love": "Reunion with past love. Nostalgic romance. Pure innocent love.",
+        "career": "Returning to a familiar field. Mentorship or teaching."
+      },
+      "reversed": {
+        "meaning": "Living in the past, stuck in memories, unable to move forward.",
+        "love": "Holding onto past relationships. Unable to move forward.",
+        "career": "Stuck in old ways. Resisting career evolution."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 42,
+      "name": "Seven of Cups",
+      "number": "Seven",
+      "keywords": [
+        "choices",
+        "illusions",
+        "fantasy",
+        "options",
+        "confusion"
+      ],
+      "upright": {
+        "meaning": "Choices, illusions, fantasies, many options, wishful thinking. So many possibilities but not all are real — separate dreams from delusions.",
+        "love": "Many romantic options. Idealizing a partner. Daydreaming.",
+        "career": "Career crossroads. Too many opportunities causing confusion."
+      },
+      "reversed": {
+        "meaning": "Clarity, prioritization, making decisions, focused direction.",
+        "love": "Seeing relationship clearly. Choosing one path.",
+        "career": "Focused career direction. Prioritizing opportunities."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 43,
+      "name": "Eight of Cups",
+      "number": "Eight",
+      "keywords": [
+        "walking away",
+        "disillusionment",
+        "search for truth",
+        "transition"
+      ],
+      "upright": {
+        "meaning": "Walking away, disillusionment, leaving behind what no longer serves you. Courageously moving on in search of deeper meaning.",
+        "love": "Walking away from unfulfilling relationship. Emotional departure.",
+        "career": "Leaving a job that no longer fulfills you. Seeking purpose."
+      },
+      "reversed": {
+        "meaning": "Fear of leaving, aimless wandering, avoidance, stagnation.",
+        "love": "Staying in an empty relationship. Fear of being alone.",
+        "career": "Too afraid to quit. Avoidance of necessary career change."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 44,
+      "name": "Nine of Cups",
+      "number": "Nine",
+      "keywords": [
+        "wish fulfilled",
+        "contentment",
+        "satisfaction",
+        "gratitude",
+        "dreams coming true"
+      ],
+      "upright": {
+        "meaning": "Wish fulfillment, contentment, satisfaction, gratitude. The wish card — your dreams are manifesting. Enjoy this moment of abundance.",
+        "love": "Relationship wishes coming true. Deep satisfaction with partner.",
+        "career": "Career goals achieved. Professional satisfaction."
+      },
+      "reversed": {
+        "meaning": "Lack of fulfillment, dissatisfaction, ungratefulness, empty wishes.",
+        "love": "Unfulfilled relationship expectations. Dissatisfaction.",
+        "career": "Career disappointment despite achievement."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 45,
+      "name": "Ten of Cups",
+      "number": "Ten",
+      "keywords": [
+        "divine love",
+        "emotional fulfillment",
+        "happy family",
+        "harmony",
+        "joy"
+      ],
+      "upright": {
+        "meaning": "Divine love, emotional fulfillment, happy family, inner peace, complete joy. The ultimate card of emotional happiness and loving connections.",
+        "love": "Soulmate relationship. Deep family harmony. Lasting love.",
+        "career": "Work-life balance. Career that supports family happiness."
+      },
+      "reversed": {
+        "meaning": "Broken family, disharmony, unfulfilled dreams, superficial happiness.",
+        "love": "Family issues affecting relationship. Unfulfilled love dreams.",
+        "career": "Work damaging family life. Unfulfilling career."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 46,
+      "name": "Page of Cups",
+      "number": "Page",
+      "keywords": [
+        "intuition",
+        "creativity",
+        "new feelings",
+        "dreamer",
+        "imaginative"
+      ],
+      "upright": {
+        "meaning": "Intuitive messages, creative inspiration, new feelings, dreamy energy. Your inner child is speaking — listen with an open heart.",
+        "love": "New romantic feeling. Creative expression of love.",
+        "career": "Creative inspiration. Intuitive business idea."
+      },
+      "reversed": {
+        "meaning": "Creative block, emotional immaturity, insecurity, dreaminess.",
+        "love": "Emotional immaturity in love. Daydreaming over action.",
+        "career": "Impractical ideas. Creative blocks."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 47,
+      "name": "Knight of Cups",
+      "number": "Knight",
+      "keywords": [
+        "romance",
+        "charm",
+        "proposal",
+        "following dreams",
+        "invitation"
+      ],
+      "upright": {
+        "meaning": "Romance, charm, proposal, following your heart. A heartfelt invitation or creative pursuit arrives — follow your passion.",
+        "love": "Romantic proposal. Grand romantic gesture. Charming partner.",
+        "career": "Creative pursuit. Following artistic passion."
+      },
+      "reversed": {
+        "meaning": "Jealousy, moodiness, unrealistic expectations, disappointment.",
+        "love": "Jealous partner. Overblown romantic expectations.",
+        "career": "Unrealistic creative projects. Emotional work drama."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 48,
+      "name": "Queen of Cups",
+      "number": "Queen",
+      "keywords": [
+        "compassion",
+        "emotional depth",
+        "intuition",
+        "nurturing",
+        "empathy"
+      ],
+      "upright": {
+        "meaning": "Compassion, emotional depth, intuition, nurturing, psychic awareness. The Queen of Cups leads with her heart and deep emotional intelligence.",
+        "love": "Deeply intuitive partner. Emotionally nurturing relationship.",
+        "career": "Caring leadership. Working with empathy and compassion."
+      },
+      "reversed": {
+        "meaning": "Emotional manipulation, codependency, martyrdom, overwhelmed.",
+        "love": "Emotional manipulation in relationship. Codependency.",
+        "career": "Taking on others' emotional burdens. Burnout from giving."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 49,
+      "name": "King of Cups",
+      "number": "King",
+      "keywords": [
+        "emotional maturity",
+        "calm",
+        "wisdom",
+        "compassionate leader",
+        "balance"
+      ],
+      "upright": {
+        "meaning": "Emotional maturity, calm leadership, wisdom, diplomacy. The King of Cups masters his emotions without suppressing them.",
+        "love": "Emotionally balanced partner. Calm mature relationship.",
+        "career": "Wise compassionate leader. Mastery of creative field."
+      },
+      "reversed": {
+        "meaning": "Emotional repression, mood swings, manipulation, volatile.",
+        "love": "Emotionally unavailable. Suppressed feelings in relationship.",
+        "career": "Outbursts at work. Manipulative leadership."
+      },
+      "suit": "Cups",
+      "element": "Water"
+    },
+    {
+      "id": 50,
+      "name": "Ace of Swords",
+      "number": "Ace",
+      "keywords": [
+        "clarity",
+        "truth",
+        "breakthrough",
+        "new idea",
+        "mental clarity"
+      ],
+      "upright": {
+        "meaning": "Mental clarity, breakthrough idea, truth revealed, decisive action. A powerful moment of insight that cuts through confusion.",
+        "love": "Clear communication in relationship. Truth revealed. Honest new start.",
+        "career": "Breakthrough idea. Major insight. Winning strategy."
+      },
+      "reversed": {
+        "meaning": "Confusion, misinformation, unclear thinking, clouded judgement.",
+        "love": "Miscommunication. Confusion in relationship.",
+        "career": "Bad idea. Poor judgement. Misinformation."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 51,
+      "name": "Two of Swords",
+      "number": "Two",
+      "keywords": [
+        "difficult decision",
+        "stalemate",
+        "blocked emotions",
+        "avoidance"
+      ],
+      "upright": {
+        "meaning": "Difficult decision, stalemate, blocked emotions, choosing between two options. You know the answer — remove the blindfold and see clearly.",
+        "love": "Indecision in love. Avoiding relationship conversation.",
+        "career": "Career crossroads. Difficult choice between options."
+      },
+      "reversed": {
+        "meaning": "Stuck indecision, releasing denial, information overload.",
+        "love": "Making a decision about relationship. Truth emerging.",
+        "career": "Breaking career stalemate. Decision being forced."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 52,
+      "name": "Three of Swords",
+      "number": "Three",
+      "keywords": [
+        "heartbreak",
+        "sorrow",
+        "grief",
+        "betrayal",
+        "painful truth"
+      ],
+      "upright": {
+        "meaning": "Heartbreak, sorrow, grief, betrayal, painful truth. A piercing emotional wound — the pain is real, but it's also the beginning of healing.",
+        "love": "Heartbreak, breakup, betrayal. Sharp emotional pain.",
+        "career": "Workplace betrayal. Painful layoff or rejection."
+      },
+      "reversed": {
+        "meaning": "Recovery from heartbreak, healing, releasing pain, forgiveness.",
+        "love": "Healing after breakup. Letting go of pain.",
+        "career": "Recovery from career setback. Emotional healing."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 53,
+      "name": "Four of Swords",
+      "number": "Four",
+      "keywords": [
+        "rest",
+        "recovery",
+        "meditation",
+        "contemplation",
+        "retreat"
+      ],
+      "upright": {
+        "meaning": "Rest, recovery, meditation, mental pause. Your mind needs a break — step back, recharge, and restore your energy before moving forward.",
+        "love": "Relationship pause. Taking space to reflect.",
+        "career": "Work break or sabbatical. Mental health recovery."
+      },
+      "reversed": {
+        "meaning": "Restlessness, burnout, unable to rest, resisting recovery.",
+        "love": "Unable to pause relationship conflict. Mental exhaustion.",
+        "career": "Work burnout. Refusing to take needed break."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 54,
+      "name": "Five of Swords",
+      "number": "Five",
+      "keywords": [
+        "conflict",
+        "defeat",
+        "loss",
+        "tension",
+        "win at all costs"
+      ],
+      "upright": {
+        "meaning": "Conflict, defeat, tension, win at all costs. You may win the battle but lose the war. Consider whether this fight is worth it.",
+        "love": "Arguments with lasting damage. Winning the fight but hurting the relationship.",
+        "career": "Workplace conflict. Winning a battle but losing respect."
+      },
+      "reversed": {
+        "meaning": "Reconciliation, moving past conflict, forgiveness, peace.",
+        "love": "Making peace after argument. Reconciliation.",
+        "career": "Workplace peace after conflict. Putting grudges aside."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 55,
+      "name": "Six of Swords",
+      "number": "Six",
+      "keywords": [
+        "transition",
+        "moving on",
+        "leaving behind",
+        "journey",
+        "healing"
+      ],
+      "upright": {
+        "meaning": "Transition, moving on, leaving behind troubled waters, journey toward peace. You're carrying wounds but moving toward calmer waters.",
+        "love": "Moving on from relationship. Healing transition.",
+        "career": "Career transition. Moving to a better environment."
+      },
+      "reversed": {
+        "meaning": "Resistance to change, unresolved past, avoiding transition.",
+        "love": "Unable to let go of past relationship. Stuck.",
+        "career": "Resisting necessary career change. Stuck in toxic work."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 56,
+      "name": "Seven of Swords",
+      "number": "Seven",
+      "keywords": [
+        "deception",
+        "strategy",
+        "stealth",
+        "trickery",
+        "getting away with something"
+      ],
+      "upright": {
+        "meaning": "Deception, strategy, stealth, cunning. Be strategic but check your integrity. Someone may not be telling the whole truth.",
+        "love": "Deception or betrayal. Keeping secrets in relationship.",
+        "career": "Office politics. Sneaky behavior or strategic advantage."
+      },
+      "reversed": {
+        "meaning": "Coming clean, confession, honesty restored.",
+        "love": "Secrets revealed. Confession. Restoring honesty.",
+        "career": "Getting caught. Confession of wrongdoing."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 57,
+      "name": "Eight of Swords",
+      "number": "Eight",
+      "keywords": [
+        "feeling trapped",
+        "self-imposed restriction",
+        "negative thoughts",
+        "victim mentality"
+      ],
+      "upright": {
+        "meaning": "Feeling trapped, self-imposed restrictions, negative thought patterns. The prison is in your mind — the bindings are loose enough to escape.",
+        "love": "Feeling trapped in relationship. Negative thought patterns.",
+        "career": "Feeling stuck at work. Mental blocks about career."
+      },
+      "reversed": {
+        "meaning": "Liberation, new perspective, releasing self-limiting beliefs.",
+        "love": "Freeing yourself from relationship anxiety.",
+        "career": "New perspective on career. Breaking mental blocks."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 58,
+      "name": "Nine of Swords",
+      "number": "Nine",
+      "keywords": [
+        "anxiety",
+        "worry",
+        "fear",
+        "nightmare",
+        "overthinking"
+      ],
+      "upright": {
+        "meaning": "Anxiety, worry, fear, nightmares, overthinking. Your mind creates worst-case scenarios — things are rarely as bad as your fears suggest.",
+        "love": "Relationship anxiety. Fear of losing partner.",
+        "career": "Workplace anxiety. Fear of failure or criticism."
+      },
+      "reversed": {
+        "meaning": "Releasing worry, hope emerging, seeking help, overcoming fear.",
+        "love": "Overcoming relationship anxiety. Seeking support.",
+        "career": "Workplace anxiety subsiding. Reaching out for help."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 59,
+      "name": "Ten of Swords",
+      "number": "Ten",
+      "keywords": [
+        "rock bottom",
+        "ending",
+        "painful conclusion",
+        "backstabbing",
+        "crisis"
+      ],
+      "upright": {
+        "meaning": "Rock bottom, painful ending, betrayal, crisis. The darkest moment just before dawn — things cannot get worse, only better from here.",
+        "love": "Relationship end. Painful breakup. Rock bottom reached.",
+        "career": "Job loss or complete career crisis. Lowest point."
+      },
+      "reversed": {
+        "meaning": "Recovery, lessons learned, improvement, survival.",
+        "love": "Healing after breakup. Rebuilding after loss.",
+        "career": "Recovery from career crisis. Phoenix rising."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 60,
+      "name": "Page of Swords",
+      "number": "Page",
+      "keywords": [
+        "curiosity",
+        "new ideas",
+        "mental agility",
+        "communication",
+        "intellectual pursuit"
+      ],
+      "upright": {
+        "meaning": "Curiosity, new ideas, mental agility, thirst for knowledge. A sharp mind eager to learn and communicate new discoveries.",
+        "love": "Intellectual connection. Curious about new relationship.",
+        "career": "Learning a new skill. Research. Starting a study."
+      },
+      "reversed": {
+        "meaning": "Gossip, careless communication, scattered thoughts, cynicism.",
+        "love": "Gossip in relationship. Hasty words.",
+        "career": "Spreading rumors. Careless communication."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 61,
+      "name": "Knight of Swords",
+      "number": "Knight",
+      "keywords": [
+        "action",
+        "speed",
+        "ambition",
+        "determination",
+        "drive"
+      ],
+      "upright": {
+        "meaning": "Bold action, speed, ambition, charging ahead. Move with purpose and determination but don't let speed compromise your direction.",
+        "love": "Direct approach to love. Moving quickly. Clear intentions.",
+        "career": "Charging toward career goals. Fast decision-making."
+      },
+      "reversed": {
+        "meaning": "Recklessness, burnout, scattering energy, aggression.",
+        "love": "Moving too fast. Aggressive pursuit. Burnout.",
+        "career": "Hasty career moves. Burnout from pushing too hard."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 62,
+      "name": "Queen of Swords",
+      "number": "Queen",
+      "keywords": [
+        "clear thinking",
+        "direct communication",
+        "independence",
+        "wisdom",
+        "honesty"
+      ],
+      "upright": {
+        "meaning": "Clear thinking, direct communication, independence, truth-teller. The Queen of Swords sees through illusions and speaks the truth with clarity.",
+        "love": "Honest direct partner. Independence in relationship.",
+        "career": "Clear-headed leadership. Fair but firm management."
+      },
+      "reversed": {
+        "meaning": "Coldness, bitterness, harsh judgement, overly critical.",
+        "love": "Emotional coldness. Overly critical of partner.",
+        "career": "Harsh leadership. Cutting criticism. Bitter attitude."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 63,
+      "name": "King of Swords",
+      "number": "King",
+      "keywords": [
+        "truth",
+        "authority",
+        "ethics",
+        "mental clarity",
+        "justice"
+      ],
+      "upright": {
+        "meaning": "Truth, authority, ethical leadership, mental clarity, justice. Fair-minded leader who values truth and intellectual integrity above all.",
+        "love": "Truth-focused partnership. Relationship based on honesty.",
+        "career": "Ethical leadership. Authority figure with integrity."
+      },
+      "reversed": {
+        "meaning": "Abuse of power, manipulation, harshness, cold logic.",
+        "love": "Cold analytical approach to love. Manipulation.",
+        "career": "Abuse of authority. Tyrannical leadership."
+      },
+      "suit": "Swords",
+      "element": "Air"
+    },
+    {
+      "id": 64,
+      "name": "Ace of Pentacles",
+      "number": "Ace",
+      "keywords": [
+        "new financial opportunity",
+        "prosperity",
+        "seed money",
+        "new job",
+        "abundance"
+      ],
+      "upright": {
+        "meaning": "New financial opportunity, prosperity, seed money, new job, material beginning. A solid foundation for building wealth and security.",
+        "love": "Building a stable relationship. Practical love foundation.",
+        "career": "New job offer. Business opportunity. Starting a venture."
+      },
+      "reversed": {
+        "meaning": "Missed opportunity, financial loss, instability, poor planning.",
+        "love": "Instability in relationship foundations.",
+        "career": "Missed job opportunity. Financial setback."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 65,
+      "name": "Two of Pentacles",
+      "number": "Two",
+      "keywords": [
+        "balance",
+        "juggling",
+        "adaptability",
+        "priorities",
+        "managing resources"
+      ],
+      "upright": {
+        "meaning": "Juggling priorities, balance, adaptability, managing resources. Life requires flexibility — keep the balls in the air without dropping what matters.",
+        "love": "Balancing relationship and other priorities. Busy love life.",
+        "career": "Juggling multiple projects. Freelance balance."
+      },
+      "reversed": {
+        "meaning": "Overwhelm, imbalance, dropping balls, financial disorganization.",
+        "love": "Overwhelmed by balancing love and life.",
+        "career": "Too many projects. Financial disorganization."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 66,
+      "name": "Three of Pentacles",
+      "number": "Three",
+      "keywords": [
+        "teamwork",
+        "collaboration",
+        "skill building",
+        "apprenticeship",
+        "quality work"
+      ],
+      "upright": {
+        "meaning": "Teamwork, collaboration, skilled work, apprenticeship. Great things are built together — share your skills and learn from others.",
+        "love": "Building relationship together. Teamwork in partnership.",
+        "career": "Collaborative project. Learning a trade. Skilled craftsmanship."
+      },
+      "reversed": {
+        "meaning": "Lack of teamwork, poor quality, disregard for skills, misalignment.",
+        "love": "Lack of teamwork in relationship. Misaligned goals.",
+        "career": "Poor collaboration. Substandard work."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 67,
+      "name": "Four of Pentacles",
+      "number": "Four",
+      "keywords": [
+        "saving",
+        "security",
+        "conservation",
+        "hoarding",
+        "control"
+      ],
+      "upright": {
+        "meaning": "Financial security, saving, conservatism, holding tight. Security is important, but make sure your grip isn't preventing growth.",
+        "love": "Holding back in relationship. Fear of vulnerability.",
+        "career": "Saving money. Job security focus. Conservative approach."
+      },
+      "reversed": {
+        "meaning": "Greed, stinginess, over-spending, letting go of control.",
+        "love": "Possessiveness. Fear of losing partner.",
+        "career": "Financial recklessness. Uncontrolled spending."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 68,
+      "name": "Five of Pentacles",
+      "number": "Five",
+      "keywords": [
+        "financial hardship",
+        "loss",
+        "isolation",
+        "insecurity",
+        "feeling left out"
+      ],
+      "upright": {
+        "meaning": "Financial hardship, loss, feeling left out in the cold. Hard times are temporary — look for help outside which you haven't noticed.",
+        "love": "Feeling unloved or unsupported. Relationship poverty.",
+        "career": "Financial struggles. Job loss. Feeling excluded."
+      },
+      "reversed": {
+        "meaning": "Recovery from hardship, finding support, spiritual abundance.",
+        "love": "Finding emotional support. Recovery from relationship loss.",
+        "career": "Financial improvement. Finding new work. Recovery."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 69,
+      "name": "Six of Pentacles",
+      "number": "Six",
+      "keywords": [
+        "generosity",
+        "giving",
+        "charity",
+        "sharing",
+        "balance of resources"
+      ],
+      "upright": {
+        "meaning": "Generosity, giving, receiving, charity, balance of resources. The flow of wealth is healthy when we give and receive in balance.",
+        "love": "Generous partner. Balanced give-and-take in relationship.",
+        "career": "Fair pay. Mentorship. Sharing wealth and knowledge."
+      },
+      "reversed": {
+        "meaning": "Strings attached, imbalance, inequality, one-sided generosity.",
+        "love": "Unequal giving in relationship. Charity with strings.",
+        "career": "Unfair wages. Power imbalance."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 70,
+      "name": "Seven of Pentacles",
+      "number": "Seven",
+      "keywords": [
+        "patience",
+        "long-term investment",
+        "assessment",
+        "review",
+        "harvest evaluation"
+      ],
+      "upright": {
+        "meaning": "Patience, assessment, long-term investment review. You've planted seeds — now step back and evaluate whether your efforts are bearing fruit.",
+        "love": "Reviewing relationship investment. Patience with growth.",
+        "career": "Assessing business progress. Waiting for returns on investment."
+      },
+      "reversed": {
+        "meaning": "Wasted effort, poor investment, impatience, discouragement.",
+        "love": "Feeling relationship investment isn't paying off.",
+        "career": "Poor business decisions. Impatience with results."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 71,
+      "name": "Eight of Pentacles",
+      "number": "Eight",
+      "keywords": [
+        "diligence",
+        "craftsmanship",
+        "skill development",
+        "mastery",
+        "hard work"
+      ],
+      "upright": {
+        "meaning": "Diligence, craftsmanship, dedicated practice, mastery through repetition. Focus on honing your craft — excellence comes from consistent effort.",
+        "love": "Working on relationship skills. Dedication to partnership.",
+        "career": "Learning a trade. Perfecting skills. Apprenticeship."
+      },
+      "reversed": {
+        "meaning": "Perfectionism, lack of motivation, shoddy work, cutting corners.",
+        "love": "Taking relationship for granted. Not putting in effort.",
+        "career": "Procrastination. Poor work quality."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 72,
+      "name": "Nine of Pentacles",
+      "number": "Nine",
+      "keywords": [
+        "luxury",
+        "independence",
+        "financial success",
+        "self-sufficiency",
+        "elegance"
+      ],
+      "upright": {
+        "meaning": "Luxury, financial independence, self-sufficiency, elegance. Your hard work has earned you comfort and abundance — enjoy the fruits of your labor.",
+        "love": "Independent love. Secure enough to enjoy relationship.",
+        "career": "Financial independence. Career success. Enjoying rewards."
+      },
+      "reversed": {
+        "meaning": "Financial setbacks, over-reliance on others, false luxury.",
+        "love": "Relationship built on material needs rather than love.",
+        "career": "Living beyond means. Financial dependency."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 73,
+      "name": "Ten of Pentacles",
+      "number": "Ten",
+      "keywords": [
+        "legacy",
+        "family wealth",
+        "inheritance",
+        "long-term success",
+        "tradition"
+      ],
+      "upright": {
+        "meaning": "Legacy, family wealth, long-term success, inheritance, tradition. Building something that lasts beyond yourself — wealth that spans generations.",
+        "love": "Family-focused relationship. Marriage with family blessing.",
+        "career": "Family business. Long-standing career success. Legacy."
+      },
+      "reversed": {
+        "meaning": "Family conflict over money, loss of inheritance, financial failure.",
+        "love": "Family drama affecting relationship. Inheritance conflict.",
+        "career": "Business failure. Losing family legacy."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 74,
+      "name": "Page of Pentacles",
+      "number": "Page",
+      "keywords": [
+        "ambition",
+        "learning",
+        "new skill",
+        "financial opportunity",
+        "practicality"
+      ],
+      "upright": {
+        "meaning": "Ambition, learning, new financial opportunity, practical step. Ready to learn and build — start with the first small step toward your goal.",
+        "love": "Practical approach to love. Building relationship step by step.",
+        "career": "Starting a new training. First step toward career goal."
+      },
+      "reversed": {
+        "meaning": "Lack of progress, procrastination, laziness, missed learning.",
+        "love": "Not putting effort into relationship. Lazy approach.",
+        "career": "Procrastination in learning. Missed opportunity."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 75,
+      "name": "Knight of Pentacles",
+      "number": "Knight",
+      "keywords": [
+        "methodical",
+        "reliable",
+        "hardworking",
+        "consistent",
+        "dutiful"
+      ],
+      "upright": {
+        "meaning": "Methodical, reliable, hardworking, patient, duty-focused. Slow and steady wins the race — thorough effort leads to lasting results.",
+        "love": "Steady dependable partner. Patient love.",
+        "career": "Consistent work ethic. Methodical project management."
+      },
+      "reversed": {
+        "meaning": "Stubbornness, laziness, procrastination, boredom, stagnation.",
+        "love": "Boring relationship routine. Stubborn partner.",
+        "career": "Work stagnation. Stubborn refusal to change."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 76,
+      "name": "Queen of Pentacles",
+      "number": "Queen",
+      "keywords": [
+        "nurturing",
+        "practical",
+        "abundance",
+        "security",
+        "earthy warmth"
+      ],
+      "upright": {
+        "meaning": "Nurturing, practical, abundant, security-focused, earthy warmth. The Queen of Pentacles creates a warm, abundant home and manages resources wisely.",
+        "love": "Nurturing partner. Practical loving relationship.",
+        "career": "Creating abundance. Practical business management."
+      },
+      "reversed": {
+        "meaning": "Neglect, financial insecurity, smothering, work-life imbalance.",
+        "love": "Neglecting home/partner. Smothering love.",
+        "career": "Work-home imbalance. Financial insecurity."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    },
+    {
+      "id": 77,
+      "name": "King of Pentacles",
+      "number": "King",
+      "keywords": [
+        "wealth",
+        "success",
+        "business leadership",
+        "abundance",
+        "generosity"
+      ],
+      "upright": {
+        "meaning": "Wealth, success, business leadership, abundance, generosity. The King of Pentacles has mastered the material world and shares his abundance.",
+        "love": "Generous stable partner. Wealthy in love and resources.",
+        "career": "Successful business leader. Financial mastery."
+      },
+      "reversed": {
+        "meaning": "Greed, wastefulness, poor money management, materialism.",
+        "love": "Materialistic approach to love. Financial control issues.",
+        "career": "Poor business decisions. Financial mismanagement."
+      },
+      "suit": "Pentacles",
+      "element": "Earth"
+    }
+  ]
+}

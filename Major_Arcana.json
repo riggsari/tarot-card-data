@@ -1,0 +1,494 @@
+{
+  "metadata": {
+    "source": "Oraclume (https://oraclume.com)",
+    "description": "Complete 22-card Major Arcana dataset with meanings, keywords, and interpretations",
+    "license": "CC0 1.0 Universal (Public Domain)",
+    "last_updated": "2026-05-28"
+  },
+  "cards": [
+    {
+      "id": 0,
+      "name": "The Fool",
+      "number": 0,
+      "arcana": "Major",
+      "keywords": ["beginnings", "innocence", "spontaneity", "free spirit", "adventure"],
+      "upright": {
+        "meaning": "New beginnings, fresh start, spontaneity, living in the moment, trusting the universe. The Fool represents the pure potential of embarking on an unknown journey with optimism.",
+        "love": "A new romantic adventure or taking a chance on love. Being open and vulnerable with someone new.",
+        "career": "Starting a new job, launching a venture, or taking a creative risk. Fresh approach to work.",
+        "finance": "Unplanned spending or financial adventure. Caution needed before major investments."
+      },
+      "reversed": {
+        "meaning": "Recklessness, risk-taking without thought, naivety, holding back due to fear, missed opportunities.",
+        "love": "Fear of commitment or jumping into relationships too quickly without thinking.",
+        "career": "Quitting impulsively or being too afraid to take a necessary career risk.",
+        "finance": "Financial recklessness or paralysis in making money decisions."
+      },
+      "element": "Air",
+      "astrological": "Uranus",
+      "yes_no": "Yes — take the leap"
+    },
+    {
+      "id": 1,
+      "name": "The Magician",
+      "number": 1,
+      "arcana": "Major",
+      "keywords": ["willpower", "skill", "manifestation", "resourcefulness", "power"],
+      "upright": {
+        "meaning": "Manifestation, resourcefulness, inspired action. You have all the tools you need. The Magician represents the ability to turn ideas into reality through willpower and focus.",
+        "love": "Charisma and attraction. A powerful connection where both partners bring their best selves.",
+        "career": "Confidence in your skills. A time to take initiative and showcase your talents.",
+        "finance": "Resourcefulness in money matters. Good time to start a new financial venture."
+      },
+      "reversed": {
+        "meaning": "Manipulation, untapped potential, trickery, wasted talent, cunning.",
+        "love": "Game-playing or manipulation. Someone may be hiding their true intentions.",
+        "career": "Underutilized skills or someone taking credit for your work.",
+        "finance": "Scams or financial manipulation. Check the fine print."
+      },
+      "element": "Fire",
+      "astrological": "Mercury",
+      "yes_no": "Yes — take decisive action"
+    },
+    {
+      "id": 2,
+      "name": "The High Priestess",
+      "number": 2,
+      "arcana": "Major",
+      "keywords": ["intuition", "mystery", "subconscious", "inner knowledge", "wisdom"],
+      "upright": {
+        "meaning": "Trust your intuition, look beneath the surface, silence is wisdom. The High Priestess represents the bridge between conscious and unconscious mind. Listen to your inner voice.",
+        "love": "Deep intuitive connection. Things are not yet revealed — patience and trust in the process.",
+        "career": "Trust your gut on a business decision. Hidden information may come to light.",
+        "finance": "Follow your intuition about investments. Not everything is as it seems on paper."
+      },
+      "reversed": {
+        "meaning": "Ignoring intuition, secrets revealed, withdrawal, superficial knowledge.",
+        "love": "Secrets in a relationship or denying your true feelings about someone.",
+        "career": "Ignoring workplace politics or refusing to listen to your instincts about a project.",
+        "finance": "Missing subtle financial cues or keeping your head in the sand about money issues."
+      },
+      "element": "Water",
+      "astrological": "Moon",
+      "yes_no": "Wait — the answer is not yet revealed"
+    },
+    {
+      "id": 3,
+      "name": "The Empress",
+      "number": 3,
+      "arcana": "Major",
+      "keywords": ["femininity", "abundance", "nature", "nurturing", "fertility"],
+      "upright": {
+        "meaning": "Abundance, fertility, beauty, nurturing, connection to nature. The Empress embodies the Divine Feminine — creative abundance, growth, and nurturing energy.",
+        "love": "A relationship blooming and growing. Fertility, pregnancy, or deep emotional nurturing.",
+        "career": "Creative projects flourishing. Growth and expansion in business.",
+        "finance": "Financial abundance and comfort. Wealth flowing naturally."
+      },
+      "reversed": {
+        "meaning": "Creative block, dependence, neglect of self-care, emptiness.",
+        "love": "Smothering or codependency. Difficulty nurturing or being nurtured.",
+        "career": "Stalled creative projects or burnout from giving too much.",
+        "finance": "Over-spending on comfort or neglecting financial health."
+      },
+      "element": "Earth",
+      "astrological": "Venus",
+      "yes_no": "Yes — abundance is flowing"
+    },
+    {
+      "id": 4,
+      "name": "The Emperor",
+      "number": 4,
+      "arcana": "Major",
+      "keywords": ["authority", "structure", "stability", "power", "protection"],
+      "upright": {
+        "meaning": "Authority, structure, discipline, stability, leadership. The Emperor represents order, rules, and the masculine principle of building solid foundations through discipline.",
+        "love": "Stable committed relationship. Need for structure and clear boundaries.",
+        "career": "Leadership role, promotion, or authority figure. Time to take charge.",
+        "finance": "Financial stability through discipline. Good time to set budgets and long-term plans."
+      },
+      "reversed": {
+        "meaning": "Rigidity, excessive control, tyranny, lack of discipline, power struggles.",
+        "love": "Controlling partner or power struggles in the relationship.",
+        "career": "Micromanagement or rebellion against authority. Outdated systems.",
+        "finance": "Too rigid with money or financial control issues in relationships."
+      },
+      "element": "Fire",
+      "astrological": "Aries",
+      "yes_no": "Yes — with structure and discipline"
+    },
+    {
+      "id": 5,
+      "name": "The Hierophant",
+      "number": 5,
+      "arcana": "Major",
+      "keywords": ["tradition", "spiritual guidance", "education", "conformity", "belief"],
+      "upright": {
+        "meaning": "Spiritual wisdom, tradition, conformity, education, guidance from institutions. The Hierophant represents established belief systems and traditional knowledge.",
+        "love": "Traditional relationship values, commitment through marriage or ceremony.",
+        "career": "Mentorship, training, working within established systems and protocols.",
+        "finance": "Traditional financial advice. Consulting an expert or following proven strategies."
+      },
+      "reversed": {
+        "meaning": "Rebellion, unorthodox approaches, questioning authority, non-conformity.",
+        "love": "Breaking traditions in relationships. Non-traditional partnership structures.",
+        "career": "Challenging workplace norms or leaving a traditional career path.",
+        "finance": "Questioning conventional financial wisdom. Alternative investments."
+      },
+      "element": "Earth",
+      "astrological": "Taurus",
+      "yes_no": "Yes — follow established wisdom"
+    },
+    {
+      "id": 6,
+      "name": "The Lovers",
+      "number": 6,
+      "arcana": "Major",
+      "keywords": ["love", "harmony", "relationships", "choices", "alignment"],
+      "upright": {
+        "meaning": "Love, harmony, meaningful connections, choices aligned with values. The Lovers represent a crossroads where heart and values guide the decision.",
+        "love": "Deep romantic connection, soulmate energy. A significant relationship choice.",
+        "career": "Choosing a career path that aligns with your values. Partnership opportunities.",
+        "finance": "Financial decisions that reflect your values. Joint financial ventures."
+      },
+      "reversed": {
+        "meaning": "Disconnection, imbalance, misalignment of values, broken relationships.",
+        "love": "Relationship challenges, breakups, or values not aligning between partners.",
+        "career": "Career choice driven by pressure rather than passion.",
+        "finance": "Financial decisions that conflict with your values."
+      },
+      "element": "Air",
+      "astrological": "Gemini",
+      "yes_no": "Yes — follow your heart"
+    },
+    {
+      "id": 7,
+      "name": "The Chariot",
+      "number": 7,
+      "arcana": "Major",
+      "keywords": ["willpower", "determination", "victory", "control", "drive"],
+      "upright": {
+        "meaning": "Willpower, determination, victory through focused effort, overcoming opposition. The Chariot represents triumph through discipline and control.",
+        "love": "Taking control of relationship direction. Strong determination to make it work.",
+        "career": "Career victory through hard work. Ambitious drive leading to success.",
+        "finance": "Financial goals achieved through discipline and determination."
+      },
+      "reversed": {
+        "meaning": "Lack of direction, aggression, obstacles, loss of control, willpower failure.",
+        "love": "Relationship power struggles or losing direction in the partnership.",
+        "career": "Burnout from pushing too hard or losing sight of goals.",
+        "finance": "Reckless financial moves or losing control of budget."
+      },
+      "element": "Water",
+      "astrological": "Cancer",
+      "yes_no": "Yes — charge forward with confidence"
+    },
+    {
+      "id": 8,
+      "name": "Strength",
+      "number": 8,
+      "arcana": "Major",
+      "keywords": ["courage", "inner strength", "compassion", "patience", "gentle power"],
+      "upright": {
+        "meaning": "Inner strength, courage, compassion, patience, gentle control. True power comes from gentleness and inner fortitude, not domination.",
+        "love": "Gentle strength in relationships. Patience and understanding with your partner.",
+        "career": "Courage to face workplace challenges. Leading with compassion and patience.",
+        "finance": "Financial patience. The discipline to stay the course with long-term plans."
+      },
+      "reversed": {
+        "meaning": "Self-doubt, insecurity, weakness, lack of courage, feeling overwhelmed.",
+        "love": "Losing patience in relationships or feeling emotionally drained.",
+        "career": "Imposter syndrome or feeling unable to handle workplace pressure.",
+        "finance": "Anxiety about money leading to poor decisions."
+      },
+      "element": "Fire",
+      "astrological": "Leo",
+      "yes_no": "Yes — trust your inner strength"
+    },
+    {
+      "id": 9,
+      "name": "The Hermit",
+      "number": 9,
+      "arcana": "Major",
+      "keywords": ["introspection", "solitude", "wisdom", "reflection", "inner guidance"],
+      "upright": {
+        "meaning": "Solitude, introspection, inner guidance, soul-searching. Sometimes the wisest choice is to withdraw and seek answers within.",
+        "love": "Time alone needed in relationships. A period of reflection before committing.",
+        "career": "Working independently or pursuing knowledge. A sabbatical or research phase.",
+        "finance": "Careful financial planning and conservative money management."
+      },
+      "reversed": {
+        "meaning": "Isolation, loneliness, withdrawal from others, refusing help.",
+        "love": "Emotional withdrawal from partner. Too much time alone.",
+        "career": "Overworking in isolation or refusing to collaborate.",
+        "finance": "Being too isolated with financial decisions. Need for advice."
+      },
+      "element": "Earth",
+      "astrological": "Virgo",
+      "yes_no": "Wait — seek inner guidance first"
+    },
+    {
+      "id": 10,
+      "name": "Wheel of Fortune",
+      "number": 10,
+      "arcana": "Major",
+      "keywords": ["change", "cycles", "destiny", "turning point", "luck"],
+      "upright": {
+        "meaning": "Change, cycles, destiny, karma, turning point. Life moves in cycles — what goes around comes around. Embrace change as a natural force.",
+        "love": "Fate bringing people together. Relationship going through a cycle of change.",
+        "career": "Career turning point, promotion, or unexpected opportunity.",
+        "finance": "Financial cycles turning upward. Good fortune in money matters."
+      },
+      "reversed": {
+        "meaning": "Bad luck, resistance to change, broken cycles, lack of control.",
+        "love": "Relationship feeling stuck or going in circles. Bad timing.",
+        "career": "Resisting necessary workplace changes. Feeling stuck.",
+        "finance": "Financial downturn or unexpected losses."
+      },
+      "element": "Fire",
+      "astrological": "Jupiter",
+      "yes_no": "Yes — change is coming, embrace it"
+    },
+    {
+      "id": 11,
+      "name": "Justice",
+      "number": 11,
+      "arcana": "Major",
+      "keywords": ["fairness", "truth", "law", "accountability", "balance"],
+      "upright": {
+        "meaning": "Justice, fairness, truth, cause and effect, legal matters. The scales must be balanced. Honesty and accountability will prevail.",
+        "love": "Fairness in relationships. Honest communication and accountability.",
+        "career": "Legal contracts, fair treatment at work. Truth about a business situation.",
+        "finance": "Fair settlements, tax matters, legal financial decisions."
+      },
+      "reversed": {
+        "meaning": "Injustice, dishonesty, lack of accountability, legal troubles.",
+        "love": "Unfair treatment in relationship. Avoiding accountability.",
+        "career": "Workplace injustice or legal issues. Dishonest colleagues.",
+        "finance": "Financial fraud or unfair contracts."
+      },
+      "element": "Air",
+      "astrological": "Libra",
+      "yes_no": "Yes — truth will prevail"
+    },
+    {
+      "id": 12,
+      "name": "The Hanged Man",
+      "number": 12,
+      "arcana": "Major",
+      "keywords": ["surrender", "pause", "new perspective", "sacrifice", "letting go"],
+      "upright": {
+        "meaning": "Pause, surrender, new perspective, letting go, sacrifice. Sometimes the best action is non-action. See the world from a different angle.",
+        "love": "Taking a relationship pause. Seeing your partnership from a new perspective.",
+        "career": "Waiting period in career. A necessary pause before the next move.",
+        "finance": "Financial holding pattern. Not the time for major money moves."
+      },
+      "reversed": {
+        "meaning": "Stalling, resistance to sacrifice, delay, stalling, martyrdom.",
+        "love": "Staying in a relationship that needs to end. Martyr mentality.",
+        "career": "Delays at work or refusing to let go of a failing project.",
+        "finance": "Financial limbo. Unwilling to make necessary cutbacks."
+      },
+      "element": "Water",
+      "astrological": "Neptune",
+      "yes_no": "Wait — pause and reflect"
+    },
+    {
+      "id": 13,
+      "name": "Death",
+      "number": 13,
+      "arcana": "Major",
+      "keywords": ["transformation", "endings", "rebirth", "change", "release"],
+      "upright": {
+        "meaning": "Transformation, endings leading to new beginnings, release of the old, metamorphosis. Death rarely means physical death — it represents profound inner change.",
+        "love": "Ending of a relationship cycle to make way for something new. Profound personal transformation.",
+        "career": "Job ending or career transformation. Old role dying to make way for new growth.",
+        "finance": "Financial transformation. Closing old accounts and starting fresh."
+      },
+      "reversed": {
+        "meaning": "Resistance to change, stagnation, repeating patterns, refusing to let go.",
+        "love": "Holding onto a dead relationship. Fear of moving on.",
+        "career": "Staying in a dead-end job. Fear of change holding you back.",
+        "finance": "Financial stagnation. Refusing to change money habits."
+      },
+      "element": "Water",
+      "astrological": "Scorpio",
+      "yes_no": "Yes — transformation is necessary"
+    },
+    {
+      "id": 14,
+      "name": "Temperance",
+      "number": 14,
+      "arcana": "Major",
+      "keywords": ["balance", "moderation", "patience", "harmony", "healing"],
+      "upright": {
+        "meaning": "Balance, moderation, patience, finding middle ground, healing, flow. Life is about integration and harmony — bring opposing forces together.",
+        "love": "Balanced healthy relationship. Patience and compromise with partner.",
+        "career": "Work-life balance. Steady progress through consistent effort.",
+        "finance": "Balanced financial approach. Saving and spending in harmony."
+      },
+      "reversed": {
+        "meaning": "Imbalance, excess, extremes, lack of harmony, impatience.",
+        "love": "Relationship imbalance. One person giving too much or taking too much.",
+        "career": "Overwork or underwork. Lack of moderation in professional life.",
+        "finance": "Extreme spending or extreme frugality. Imbalance."
+      },
+      "element": "Fire",
+      "astrological": "Sagittarius",
+      "yes_no": "Yes — find balance and harmony"
+    },
+    {
+      "id": 15,
+      "name": "The Devil",
+      "number": 15,
+      "arcana": "Major",
+      "keywords": ["bondage", "addiction", "materialism", "shadow self", "trapped"],
+      "upright": {
+        "meaning": "Bondage, addiction, materialism, playfulness with dark edges. The chains are self-imposed. Recognize what holds you captive and reclaim your freedom.",
+        "love": "Toxic relationships, codependency, or intense sexual attraction that binds.",
+        "career": "Feeling trapped at work. Unhealthy attachment to money or status.",
+        "finance": "Financial bondage through debt. Material overconsumption."
+      },
+      "reversed": {
+        "meaning": "Release, breaking free, reclaiming power, overcoming addiction.",
+        "love": "Breaking free from a toxic relationship. Reclaiming personal power.",
+        "career": "Leaving a toxic workplace. Breaking free from materialism.",
+        "finance": "Breaking debt cycles. Financial detox and fresh start."
+      },
+      "element": "Earth",
+      "astrological": "Capricorn",
+      "yes_no": "No — examine what holds you back"
+    },
+    {
+      "id": 16,
+      "name": "The Tower",
+      "number": 16,
+      "arcana": "Major",
+      "keywords": ["sudden change", "upheaval", "revelation", "crisis", "awakening"],
+      "upright": {
+        "meaning": "Sudden upheaval, revelation, disruption, awakening. The Tower destroys false structures to make way for truth. Painful but necessary.",
+        "love": "Sudden breakup or relationship revelation. Shocking truth coming to light.",
+        "career": "Unexpected job loss or company restructuring. A shake-up that needed to happen.",
+        "finance": "Sudden financial loss or unexpected expense. A financial wake-up call."
+      },
+      "reversed": {
+        "meaning": "Avoiding disaster, resistance to change, delaying the inevitable, personal crisis.",
+        "love": "Trying to prevent relationship collapse. Avoiding the truth.",
+        "career": "Delaying necessary career change. Resisting unavoidable restructuring.",
+        "finance": "Avoiding financial reality. Preventing necessary money changes."
+      },
+      "element": "Fire",
+      "astrological": "Mars",
+      "yes_no": "No — prepare for disruption"
+    },
+    {
+      "id": 17,
+      "name": "The Star",
+      "number": 17,
+      "arcana": "Major",
+      "keywords": ["hope", "inspiration", "serenity", "purpose", "renewal"],
+      "upright": {
+        "meaning": "Hope, inspiration, healing, renewal, serenity, purpose. After the storm comes peace. Trust in the universe and your path forward.",
+        "love": "Healing after heartbreak. Hopeful energy for new love. Spiritual connection.",
+        "career": "Finding your true calling. Creative inspiration. Career aligned with purpose.",
+        "finance": "Financial hope after hardship. Generosity and trusting abundance."
+      },
+      "reversed": {
+        "meaning": "Despair, lack of faith, discouragement, hopelessness, uninspired.",
+        "love": "Loss of hope in love. Feeling disconnected from partner.",
+        "career": "Lack of inspiration at work. Feeling your work lacks meaning.",
+        "finance": "Financial discouragement. Feeling hopeless about money."
+      },
+      "element": "Air",
+      "astrological": "Aquarius",
+      "yes_no": "Yes — have faith in the universe"
+    },
+    {
+      "id": 18,
+      "name": "The Moon",
+      "number": 18,
+      "arcana": "Major",
+      "keywords": ["illusion", "fear", "uncertainty", "subconscious", "intuition"],
+      "upright": {
+        "meaning": "Illusion, fear, anxiety, subconscious, uncertainty. Things are not as they seem. Trust your intuition but beware of deception and delusion.",
+        "love": "Uncertainty in love. Hidden truths or deception. Trust your instincts.",
+        "career": "Workplace confusion. Hidden agendas or unclear job security.",
+        "finance": "Financial uncertainty. Hidden fees or unclear investment situations."
+      },
+      "reversed": {
+        "meaning": "Releasing fear, clarity emerging, understanding, overcoming anxiety.",
+        "love": "Truth coming to light in relationships. Releasing fears about love.",
+        "career": "Clarity emerging at work. Overcoming workplace anxiety.",
+        "finance": "Money fears subsiding. Clarity in financial matters."
+      },
+      "element": "Water",
+      "astrological": "Pisces",
+      "yes_no": "Wait — things are unclear, seek truth"
+    },
+    {
+      "id": 19,
+      "name": "The Sun",
+      "number": 19,
+      "arcana": "Major",
+      "keywords": ["joy", "success", "vitality", "celebration", "confidence"],
+      "upright": {
+        "meaning": "Joy, success, vitality, celebration, confidence, achievement. The Sun is one of the most positive cards — happiness, success, and fulfillment await.",
+        "love": "Joyful relationship. Celebration of love. Confidence in partnership.",
+        "career": "Career success and recognition. Achieving goals with confidence.",
+        "finance": "Financial success and prosperity. Abundant energy."
+      },
+      "reversed": {
+        "meaning": "Temporary setback, lack of joy, clouded optimism, negativity.",
+        "love": "Relationship happiness blocked. Inner child wounds affecting love.",
+        "career": "Career disappointment. Success delayed but not denied.",
+        "finance": "Temporary financial setback. Optimism returning."
+      },
+      "element": "Fire",
+      "astrological": "Sun",
+      "yes_no": "Yes — absolute yes!"
+    },
+    {
+      "id": 20,
+      "name": "Judgement",
+      "number": 20,
+      "arcana": "Major",
+      "keywords": ["judgement", "rebirth", "inner calling", "accountability", "absolution"],
+      "upright": {
+        "meaning": "Judgement, rebirth, inner calling, absolution, evaluation. A moment of reckoning — be honest with yourself and answer your inner calling.",
+        "love": "Relationship evaluation. Renewal of vows or recommitting to love.",
+        "career": "Career calling. A major evaluation of professional direction.",
+        "finance": "Financial judgment. Reviewing past money decisions and making better choices."
+      },
+      "reversed": {
+        "meaning": "Self-doubt, harsh self-judgment, refusing to learn from past, ignoring calling.",
+        "love": "Holding onto past relationship guilt. Refusing to forgive yourself or partner.",
+        "career": "Ignoring your true career calling. Fear of change.",
+        "finance": "Repeating the same money mistakes. Self-sabotage."
+      },
+      "element": "Fire",
+      "astrological": "Pluto",
+      "yes_no": "Yes — answer the call"
+    },
+    {
+      "id": 21,
+      "name": "The World",
+      "number": 21,
+      "arcana": "Major",
+      "keywords": ["completion", "accomplishment", "fulfillment", "wholeness", "travel"],
+      "upright": {
+        "meaning": "Completion, accomplishment, fulfillment, wholeness, integration. A major cycle ends successfully. You've reached your goal — celebrate and prepare for the next journey.",
+        "love": "Soulmate energy. Complete and fulfilling partnership. Relationship milestone.",
+        "career": "Major career achievement. Project completion. Global recognition.",
+        "finance": "Financial completion. Goals achieved. Cycle of prosperity closing successfully."
+      },
+      "reversed": {
+        "meaning": "Incompletion, delays, stagnation, shortcuts, lack of closure.",
+        "love": "Relationship not ready for commitment. Delays in partnership goals.",
+        "career": "Stalled career progress. Project not reaching completion.",
+        "finance": "Delayed financial goals. Incomplete financial plans."
+      },
+      "element": "Earth",
+      "astrological": "Saturn",
+      "yes_no": "Yes — a cycle completes successfully"
+    }
+  ]
+}
