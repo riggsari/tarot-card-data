@@ -123,6 +123,11 @@
             font-size: 0.95em;
         }
 
+        .card-illustration {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
         .controls {
             text-align: center;
             margin-top: 20px;
@@ -335,6 +340,112 @@
         let missedPairs = [];
         let attemptedPairs = new Set(); // Track which pairs were attempted
 
+        // Card illustrations mapping
+        const cardIllustrations = {
+            'The Fool': '🤡',
+            'The Magician': '🎩',
+            'The High Priestess': '👑',
+            'The Empress': '👸',
+            'The Emperor': '👨‍💼',
+            'The Hierophant': '🙏',
+            'The Lovers': '💕',
+            'The Chariot': '🏇',
+            'Strength': '💪',
+            'The Hermit': '🧙',
+            'Wheel of Fortune': '🎡',
+            'Justice': '⚖️',
+            'The Hanged Man': '🪢',
+            'Death': '💀',
+            'Temperance': '🍶',
+            'The Devil': '😈',
+            'The Tower': '🏰',
+            'The Star': '⭐',
+            'The Moon': '🌙',
+            'The Sun': '☀️',
+            'Judgement': '📯',
+            'The World': '🌍',
+            'Ace of Wands': '🔥',
+            'Two of Wands': '🌍',
+            'Three of Wands': '🌅',
+            'Four of Wands': '🎉',
+            'Five of Wands': '⚔️',
+            'Six of Wands': '🏆',
+            'Seven of Wands': '🛡️',
+            'Eight of Wands': '💨',
+            'Nine of Wands': '🚧',
+            'Ten of Wands': '📦',
+            'Page of Wands': '👦',
+            'Knight of Wands': '🐴',
+            'Queen of Wands': '👑',
+            'King of Wands': '👨‍🦰',
+            'Ace of Cups': '🏆',
+            'Two of Cups': '🤝',
+            'Three of Cups': '🥂',
+            'Four of Cups': '🤔',
+            'Five of Cups': '😢',
+            'Six of Cups': '🎁',
+            'Seven of Cups': '💭',
+            'Eight of Cups': '🚶',
+            'Nine of Cups': '😊',
+            'Ten of Cups': '👨‍👩‍👧‍👦',
+            'Page of Cups': '👧',
+            'Knight of Cups': '🐎',
+            'Queen of Cups': '👸',
+            'King of Cups': '👨‍🦱',
+            'Ace of Swords': '⚔️',
+            'Two of Swords': '🤐',
+            'Three of Swords': '💔',
+            'Four of Swords': '😴',
+            'Five of Swords': '😤',
+            'Six of Swords': '⛵',
+            'Seven of Swords': '🤫',
+            'Eight of Swords': '🔗',
+            'Nine of Swords': '😰',
+            'Ten of Swords': '😵',
+            'Page of Swords': '📚',
+            'Knight of Swords': '🗡️',
+            'Queen of Swords': '👩‍⚖️',
+            'King of Swords': '👨‍⚖️',
+            'Ace of Pentacles': '💰',
+            'Two of Pentacles': '🎪',
+            'Three of Pentacles': '🏗️',
+            'Four of Pentacles': '🤲',
+            'Five of Pentacles': '🚫',
+            'Six of Pentacles': '🤲',
+            'Seven of Pentacles': '🌱',
+            'Eight of Pentacles': '🎓',
+            'Nine of Pentacles': '🌹',
+            'Ten of Pentacles': '🏛️',
+            'Page of Pentacles': '📖',
+            'Knight of Pentacles': '🐴',
+            'Queen of Pentacles': '👩‍🌾',
+            'King of Pentacles': '👨‍🌾'
+        };
+
+        // Function to clean card descriptions by removing card name references
+        function cleanDescription(description, cardName) {
+            if (!description) return description;
+            
+            // Remove patterns like "The Fool represents", "The Magician represents", etc.
+            // Also handles "The Empress embodies", etc.
+            const patterns = [
+                new RegExp(`\\b${cardName}\\s+(represents|embodies|is|shows|brings|brings the)\\b`, 'gi'),
+                new RegExp(`\\b${cardName}\\s+`, 'gi')
+            ];
+            
+            let cleaned = description;
+            patterns.forEach(pattern => {
+                cleaned = cleaned.replace(pattern, '');
+            });
+            
+            // Capitalize first letter if it's not already
+            if (cleaned.length > 0) {
+                cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+            }
+            
+            return cleaned;
+        }
+
         // Load tarot card data
         async function loadCards() {
             try {
@@ -349,7 +460,7 @@
                 // Extract cards from Major Arcana
                 const majorCards = majorData.cards.map(card => ({
                     name: card.name,
-                    meaning: card.upright.meaning,
+                    meaning: cleanDescription(card.upright.meaning, card.name),
                     keywords: card.keywords.join(', ')
                 }));
 
@@ -359,7 +470,7 @@
                     suit.cards.forEach(card => {
                         minorCards.push({
                             name: card.name,
-                            meaning: card.upright.meaning,
+                            meaning: cleanDescription(card.upright.meaning, card.name),
                             keywords: card.keywords.join(', ')
                         });
                     });
@@ -457,7 +568,11 @@
                 contentDiv.className = 'card-content';
                 
                 if (card.type === 'name') {
-                    contentDiv.innerHTML = `<div class="card-name">${card.content}</div>`;
+                    const illustration = cardIllustrations[card.content] || '🔮';
+                    contentDiv.innerHTML = `
+                        <div class="card-illustration">${illustration}</div>
+                        <div class="card-name">${card.content}</div>
+                    `;
                 } else {
                     contentDiv.innerHTML = `<div class="card-meaning">${card.content}</div>`;
                 }
@@ -596,9 +711,10 @@
                 missedPairs.forEach(card => {
                     const pairDiv = document.createElement('div');
                     pairDiv.className = 'missed-pair';
+                    const illustration = cardIllustrations[card.name] || '🔮';
                     pairDiv.innerHTML = `
-                        <div class="missed-pair-name">${card.name}</div>
-                        <div class="missed-pair-meaning">${card.meaning}</div>
+                        <div class="missed-pair-name">${illustration} ${card.name}</div>
+                        <div class="missed-pair-meaning">${cleanDescription(card.meaning, card.name)}</div>
                     `;
                     missedPairsDiv.appendChild(pairDiv);
                 });
