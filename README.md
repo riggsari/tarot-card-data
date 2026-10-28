@@ -75,6 +75,17 @@ const majorArcana = data.cards.filter(c => c.arcana === 'Major');
 console.log(majorArcana.map(c => c.name));
 ```
 
+## 🎮 Interactive Game
+
+Try the **[Tarot Card Matching Game](matching-game.html)** — an educational game that helps you learn tarot meanings!
+
+- Match card names with their meanings
+- Three difficulty levels (6, 10, or 15 pairs)
+- Track your score, time, and accuracy
+- Review missed pairs to improve your knowledge
+
+See [GAME_README.md](GAME_README.md) for detailed instructions.
+
 ## 🔮 Use Cases
 
 - **Tarot reading apps** — Build your own digital tarot app

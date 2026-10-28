@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Test Suite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #764ba2;
+        }
+        .test {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ccc;
+        }
+        .test.pass {
+            border-left-color: #4caf50;
+        }
+        .test.fail {
+            border-left-color: #f44336;
+        }
+        .test-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .test-result {
+            color: #666;
+        }
+        .summary {
+            background: #764ba2;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            background: #764ba2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #5a3a7a;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 Tarot Matching Game - Test Suite</h1>
+    <button onclick="runTests()">Run Tests</button>
+    <div id="results"></div>
+
+    <script>
+        let testResults = [];
+
+        function test(name, fn) {
+            try {
+                fn();
+                testResults.push({ name, passed: true, message: 'Passed' });
+            } catch (error) {
+                testResults.push({ name, passed: false, message: error.message });
+            }
+        }
+
+        function assert(condition, message) {
+            if (!condition) {
+                throw new Error(message || 'Assertion failed');
+            }
+        }
+
+        async function runTests() {
+            testResults = [];
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Running tests...</p>';
+
+            // Test 1: Load Major Arcana data
+            test('Load Major Arcana JSON', async () => {
+                const response = await fetch('Major_Arcana.json');
+                assert(response.ok, 'Failed to fetch Major_Arcana.json');
+                const data = await response.json();
+                assert(data.cards, 'Major Arcana data missing cards array');
+                assert(data.cards.length === 22, `Expected 22 Major Arcana cards, got ${data.cards.length}`);
+            });
+
+            // Test 2: Load Minor Arcana data
+            test('Load Minor Arcana JSON', async () => {
+                const response = await fetch('Minor_Arcana.json');
+                assert(response.ok, 'Failed to fetch Minor_Arcana.json');
+                const data = await response.json();
+                assert(data.suits, 'Minor Arcana data missing suits array');
+                assert(data.suits.length === 4, `Expected 4 suits, got ${data.suits.length}`);
+                
+                let totalCards = 0;
+                data.suits.forEach(suit => {
+                    totalCards += suit.cards.length;
+                });
+                assert(totalCards === 56, `Expected 56 Minor Arcana cards, got ${totalCards}`);
+            });
+
+            // Test 3: Verify card structure
+            test('Verify card data structure', async () => {
+                const response = await fetch('Major_Arcana.json');
+                const data = await response.json();
+                const card = data.cards[0];
+                
+                assert(card.name, 'Card missing name');
+                assert(card.upright, 'Card missing upright meanings');
+                assert(card.upright.meaning, 'Card missing upright meaning text');
+                assert(card.keywords, 'Card missing keywords');
+                assert(Array.isArray(card.keywords), 'Keywords should be an array');
+            });
+
+            // Test 4: Verify all cards have required fields
+            test('All cards have required fields', async () => {
+                const [majorResponse, minorResponse] = await Promise.all([
+                    fetch('Major_Arcana.json'),
+                    fetch('Minor_Arcana.json')
+                ]);
+                
+                const majorData = await majorResponse.json();
+                const minorData = await minorResponse.json();
+                
+                // Check Major Arcana
+                majorData.cards.forEach((card, index) => {
+                    assert(card.name, `Major Arcana card ${index} missing name`);
+                    assert(card.upright?.meaning, `${card.name} missing upright meaning`);
+                    assert(card.keywords?.length > 0, `${card.name} missing keywords`);
+                });
+                
+                // Check Minor Arcana
+                minorData.suits.forEach(suit => {
+                    suit.cards.forEach((card, index) => {
+                        assert(card.name, `${suit.suit} card ${index} missing name`);
+                        assert(card.upright?.meaning, `${card.name} missing upright meaning`);
+                        assert(card.keywords?.length > 0, `${card.name} missing keywords`);
+                    });
+                });
+            });
+
+            // Test 5: Verify unique card names
+            test('All card names are unique', async () => {
+                const [majorResponse, minorResponse] = await Promise.all([
+                    fetch('Major_Arcana.json'),
+                    fetch('Minor_Arcana.json')
+                ]);
+                
+                const majorData = await majorResponse.json();
+                const minorData = await minorResponse.json();
+                
+                const names = new Set();
+                
+                majorData.cards.forEach(card => {
+                    assert(!names.has(card.name), `Duplicate card name: ${card.name}`);
+                    names.add(card.name);
+                });
+                
+                minorData.suits.forEach(suit => {
+                    suit.cards.forEach(card => {
+                        assert(!names.has(card.name), `Duplicate card name: ${card.name}`);
+                        names.add(card.name);
+                    });
+                });
+                
+                assert(names.size === 78, `Expected 78 unique cards, got ${names.size}`);
+            });
+
+            // Test 6: Verify meanings are not empty
+            test('All meanings are non-empty strings', async () => {
+                const [majorResponse, minorResponse] = await Promise.all([
+                    fetch('Major_Arcana.json'),
+                    fetch('Minor_Arcana.json')
+                ]);
+                
+                const majorData = await majorResponse.json();
+                const minorData = await minorResponse.json();
+                
+                majorData.cards.forEach(card => {
+                    assert(
+                        typeof card.upright.meaning === 'string' && card.upright.meaning.length > 10,
+                        `${card.name} has invalid meaning`
+                    );
+                });
+                
+                minorData.suits.forEach(suit => {
+                    suit.cards.forEach(card => {
+                        assert(
+                            typeof card.upright.meaning === 'string' && card.upright.meaning.length > 10,
+                            `${card.name} has invalid meaning`
+                        );
+                    });
+                });
+            });
+
+            // Test 7: Simulate game logic
+            test('Game logic simulation', () => {
+                // Simulate creating pairs
+                const mockCards = [
+                    { name: 'The Fool', meaning: 'New beginnings' },
+                    { name: 'The Magician', meaning: 'Manifestation' }
+                ];
+                
+                const gameCards = [];
+                mockCards.forEach((card, index) => {
+                    gameCards.push({ type: 'name', content: card.name, pairId: index });
+                    gameCards.push({ type: 'meaning', content: card.meaning, pairId: index });
+                });
+                
+                assert(gameCards.length === 4, 'Should create 4 game cards from 2 pairs');
+                
+                // Test matching logic
+                const card1 = gameCards[0]; // name, pairId 0
+                const card2 = gameCards[1]; // meaning, pairId 0
+                const isMatch = card1.pairId === card2.pairId && card1.type !== card2.type;
+                assert(isMatch, 'Should match cards with same pairId and different types');
+                
+                const card3 = gameCards[2]; // name, pairId 1
+                const isNotMatch = card1.pairId === card3.pairId && card1.type !== card3.type;
+                assert(!isNotMatch, 'Should not match cards with different pairIds');
+            });
+
+            // Display results
+            displayResults();
+        }
+
+        function displayResults() {
+            const resultsDiv = document.getElementById('results');
+            const passed = testResults.filter(r => r.passed).length;
+            const failed = testResults.filter(r => !r.passed).length;
+            
+            let html = '';
+            
+            testResults.forEach(result => {
+                html += `
+                    <div class="test ${result.passed ? 'pass' : 'fail'}">
+                        <div class="test-name">${result.passed ? '✓' : '✗'} ${result.name}</div>
+                        <div class="test-result">${result.message}</div>
+                    </div>
+                `;
+            });
+            
+            html += `
+                <div class="summary">
+                    <h2>Test Summary</h2>
+                    <p><strong>${passed}</strong> passed, <strong>${failed}</strong> failed</p>
+                    <p>Total: ${testResults.length} tests</p>
+                </div>
+            `;
+            
+            resultsDiv.innerHTML = html;
+        }
+
+        // Auto-run tests on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(runTests, 500);
+        });
+    </script>
+</body>
+</html>
