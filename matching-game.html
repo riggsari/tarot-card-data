@@ -341,6 +341,7 @@
         let seconds = 0;
         let gameStarted = false;
         let missedPairs = [];
+        let attemptedPairs = new Set(); // Track which pairs were attempted
 
         // Load tarot card data
         async function loadCards() {
@@ -405,6 +406,7 @@
             seconds = 0;
             selectedCards = [];
             missedPairs = [];
+            attemptedPairs = new Set();
             gameStarted = true;
 
             // Select random cards
@@ -501,6 +503,7 @@
                 if (first.card.pairId === second.card.pairId && 
                     first.card.type !== second.card.type) {
                     // Match!
+                    attemptedPairs.add(first.card.pairId);
                     setTimeout(() => {
                         first.element.classList.remove('selected');
                         second.element.classList.remove('selected');
@@ -519,10 +522,12 @@
                         selectedCards = [];
                     }, 500);
                 } else {
-                    // No match
-                    // Track missed pair
-                    if (!missedPairs.some(mp => mp.name === first.card.cardData.name)) {
-                        missedPairs.push(first.card.cardData);
+                    // No match - track the attempted pairs
+                    if (first.card.type === 'name') {
+                        attemptedPairs.add(first.card.pairId);
+                    }
+                    if (second.card.type === 'name') {
+                        attemptedPairs.add(second.card.pairId);
                     }
 
                     setTimeout(() => {
@@ -562,6 +567,28 @@
 
             // Calculate accuracy
             const accuracy = attempts > 0 ? Math.round((matchedPairs / attempts) * 100) : 0;
+
+            // Identify missed pairs - pairs that were attempted but never successfully matched
+            missedPairs = [];
+            const matchedPairIds = new Set();
+            
+            // Find all matched pair IDs
+            gameCards.forEach((card, index) => {
+                const cardElement = document.querySelectorAll('.card')[index];
+                if (cardElement.classList.contains('matched')) {
+                    matchedPairIds.add(card.pairId);
+                }
+            });
+            
+            // Find pairs that were attempted but not matched
+            attemptedPairs.forEach(pairId => {
+                if (!matchedPairIds.has(pairId)) {
+                    const cardData = gameCards.find(c => c.pairId === pairId).cardData;
+                    if (!missedPairs.some(mp => mp.name === cardData.name)) {
+                        missedPairs.push(cardData);
+                    }
+                }
+            });
 
             // Update final stats
             document.getElementById('finalTime').textContent = document.getElementById('timer').textContent;
@@ -610,6 +637,7 @@
             seconds = 0;
             selectedCards = [];
             missedPairs = [];
+            attemptedPairs = new Set();
 
             document.getElementById('gameBoard').innerHTML = '';
             document.getElementById('timer').textContent = '0:00';
