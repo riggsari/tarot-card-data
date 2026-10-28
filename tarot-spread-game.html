@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Spread Game - Three Card Reading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #2c1654 0%, #4a148c 50%, #6a1b9a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .question-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .question-section h2 {
+            color: #4a148c;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #questionInput {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: 2px solid #6a1b9a;
+            border-radius: 8px;
+            font-family: 'Georgia', serif;
+            transition: border-color 0.3s ease;
+        }
+
+        #questionInput:focus {
+            outline: none;
+            border-color: #4a148c;
+            box-shadow: 0 0 10px rgba(106, 27, 154, 0.3);
+        }
+
+        #castButton {
+            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #castButton:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        #castButton:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        #castButton:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .user-question {
+            background: rgba(106, 27, 154, 0.1);
+            border-left: 4px solid #6a1b9a;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .user-question h3 {
+            color: #4a148c;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-question p {
+            color: #333;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            min-height: 400px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 320px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-position {
+            text-align: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6a1b9a;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #6a1b9a;
+        }
+
+        .card-name {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #4a148c;
+        }
+
+        .card-status {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-meaning {
+            text-align: left;
+            line-height: 1.7;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .card-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .keyword {
+            background: #f3e5f5;
+            color: #4a148c;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+
+        .error {
+            text-align: center;
+            color: #ff6b6b;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .instructions p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .cards-container {
+                gap: 1rem;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            #questionInput {
+                width: 100%;
+            }
+
+            #castButton {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 Tarot Spread Game 🔮</h1>
+        <p class="subtitle">Ask your question and let the cards reveal their wisdom</p>
+        
+        <div class="instructions">
+            <p>✨ Enter a question about your life, future, or a decision you're facing</p>
+            <p>🎴 Three cards will be drawn with contextual meanings based on your question</p>
+        </div>
+
+        <div class="question-section">
+            <h2>What guidance do you seek?</h2>
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="questionInput" 
+                    placeholder="e.g., What would happen if I move? Should I change careers?"
+                    maxlength="200"
+                />
+                <button id="castButton" onclick="castCards()">Cast Cards</button>
+            </div>
+        </div>
+
+        <div id="userQuestionDisplay" class="user-question">
+            <h3>Your Question:</h3>
+            <p id="questionText"></p>
+        </div>
+
+        <div id="content" class="cards-container">
+        </div>
+    </div>
+
+    <script>
+        let majorArcana = [];
+        let minorArcana = [];
+        let allCards = [];
+
+        // Load both JSON files
+        async function loadCards() {
+            try {
+                const [majorResponse, minorResponse] = await Promise.all([
+                    fetch('Major_Arcana.json'),
+                    fetch('Minor_Arcana.json')
+                ]);
+
+                if (!majorResponse.ok || !minorResponse.ok) {
+                    throw new Error('Failed to load card data');
+                }
+
+                const majorData = await majorResponse.json();
+                const minorData = await minorResponse.json();
+
+                // Extract cards from Major Arcana
+                majorArcana = majorData.cards;
+
+                // Extract cards from Minor Arcana (flatten all suits)
+                minorArcana = [];
+                minorData.suits.forEach(suit => {
+                    minorArcana.push(...suit.cards);
+                });
+
+                // Combine all cards
+                allCards = [...majorArcana, ...minorArcana];
+
+                console.log(`Loaded ${allCards.length} cards successfully`);
+            } catch (error) {
+                document.getElementById('content').innerHTML = `
+                    <div class="error">
+                        <h2>Error Loading Cards</h2>
+                        <p>${error.message}</p>
+                        <p>Please make sure Major_Arcana.json and Minor_Arcana.json are in the same directory.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Analyze question and generate contextual labels
+        function generateLabels(question) {
+            const lowerQuestion = question.toLowerCase();
+            
+            // Decision-based questions
+            if (lowerQuestion.includes('should i') || lowerQuestion.includes('should we')) {
+                return [
+                    'Current Situation',
+                    'If You Do It',
+                    'If You Don\'t Do It'
+                ];
+            }
+            
+            // Move/relocation questions
+            if (lowerQuestion.includes('move') || lowerQuestion.includes('relocat')) {
+                return [
+                    'Factors to Watch',
+                    'Positive Results of the Move',
+                    'Negative Results of the Move'
+                ];
+            }
+            
+            // Career/job questions
+            if (lowerQuestion.includes('career') || lowerQuestion.includes('job') || lowerQuestion.includes('work')) {
+                return [
+                    'Current Career Energy',
+                    'Opportunities Ahead',
+                    'Challenges to Overcome'
+                ];
+            }
+            
+            // Relationship questions
+            if (lowerQuestion.includes('love') || lowerQuestion.includes('relationship') || 
+                lowerQuestion.includes('partner') || lowerQuestion.includes('dating')) {
+                return [
+                    'Your Heart\'s Truth',
+                    'The Other\'s Perspective',
+                    'Relationship Potential'
+                ];
+            }
+            
+            // Future/outcome questions
+            if (lowerQuestion.includes('what will') || lowerQuestion.includes('what would') || 
+                lowerQuestion.includes('happen')) {
+                return [
+                    'Current Influences',
+                    'Likely Outcome',
+                    'Hidden Factors'
+                ];
+            }
+            
+            // Change/transformation questions
+            if (lowerQuestion.includes('change') || lowerQuestion.includes('transform')) {
+                return [
+                    'What Needs to Change',
+                    'How to Facilitate Change',
+                    'Result of the Change'
+                ];
+            }
+            
+            // Money/finance questions
+            if (lowerQuestion.includes('money') || lowerQuestion.includes('financ') || 
+                lowerQuestion.includes('wealth')) {
+                return [
+                    'Current Financial Energy',
+                    'Opportunities for Growth',
+                    'Potential Obstacles'
+                ];
+            }
+            
+            // General/default spread
+            return [
+                'Past Influences',
+                'Present Situation',
+                'Future Guidance'
+            ];
+        }
+
+        // Get random cards without replacement
+        function getRandomCards(count) {
+            const shuffled = [...allCards].sort(() => Math.random() - 0.5);
+            return shuffled.slice(0, count);
+        }
+
+        // Determine if card should be reversed (50% chance)
+        function isReversed() {
+            return Math.random() < 0.5;
+        }
+
+        // Cast cards based on user question
+        function castCards() {
+            const questionInput = document.getElementById('questionInput');
+            const question = questionInput.value.trim();
+
+            if (!question) {
+                alert('Please enter a question before casting cards!');
+                questionInput.focus();
+                return;
+            }
+
+            if (allCards.length === 0) {
+                alert('Cards are still loading. Please wait a moment and try again.');
+                return;
+            }
+
+            // Display the user's question
+            document.getElementById('questionText').textContent = question;
+            document.getElementById('userQuestionDisplay').style.display = 'block';
+
+            // Generate contextual labels based on the question
+            const labels = generateLabels(question);
+
+            // Get three random cards
+            const drawnCards = getRandomCards(3);
+            
+            // Build the cards HTML
+            let html = '';
+            drawnCards.forEach((card, index) => {
+                const reversed = isReversed();
+                const meaning = reversed ? card.reversed.meaning : card.upright.meaning;
+                const statusText = reversed ? '(Reversed)' : '';
+                
+                html += `
+                    <div class="card">
+                        <div class="card-position">${labels[index]}</div>
+                        <div class="card-name">${card.name}</div>
+                        ${statusText ? `<div class="card-status">${statusText}</div>` : ''}
+                        ${card.keywords ? `
+                            <div class="card-keywords">
+                                ${card.keywords.slice(0, 3).map(kw => `<span class="keyword">${kw}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        <div class="card-meaning">${meaning}</div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('content').innerHTML = html;
+
+            // Scroll to results
+            setTimeout(() => {
+                document.getElementById('userQuestionDisplay').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            }, 100);
+        }
+
+        // Allow Enter key to cast cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const questionInput = document.getElementById('questionInput');
+            questionInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    castCards();
+                }
+            });
+            
+            // Load cards on page load
+            loadCards();
+        });
+    </script>
+</body>
+</html>
