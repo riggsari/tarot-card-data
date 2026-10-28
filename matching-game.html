@@ -506,12 +506,12 @@
                         score += 100;
                         updateStats();
 
-                        // Check if game is complete
+                        selectedCards = [];
+
+                        // Check if game is complete (after incrementing matchedPairs)
                         if (matchedPairs === gameCards.length / 2) {
                             endGame();
                         }
-
-                        selectedCards = [];
                     }, 500);
                 } else {
                     // No match - track the attempted pairs
