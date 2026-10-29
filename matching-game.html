@@ -13,7 +13,13 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0f0f0f;
+            background: #0a0a0a;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(80, 20, 100, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(40, 10, 60, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(60, 15, 80, 0.06) 0%, transparent 50%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><defs><pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(150,100,200,0.15)"/><circle cx="30" cy="25" r="0.3" fill="rgba(150,100,200,0.1)"/><circle cx="60" cy="15" r="0.4" fill="rgba(150,100,200,0.12)"/><circle cx="80" cy="40" r="0.5" fill="rgba(150,100,200,0.15)"/><circle cx="20" cy="70" r="0.3" fill="rgba(150,100,200,0.1)"/><circle cx="70" cy="85" r="0.4" fill="rgba(150,100,200,0.12)"/></pattern></defs><rect width="100" height="100" fill="none"/><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -29,16 +35,24 @@
 
         .header {
             text-align: center;
-            color: #f5f5f5;
+            color: #d8b8e8;
             margin-bottom: 40px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .header h1 {
             font-size: 3.5em;
             margin-bottom: 10px;
-            text-shadow: none;
+            text-shadow: 0 4px 12px rgba(80,20,120,0.4);
             font-weight: 300;
             letter-spacing: 2px;
+            color: #e8c8f8;
+        }
+
+        .header p {
+            color: #b8a0d0;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
         }
 
         .stats {
@@ -54,14 +68,19 @@
             padding: 15px 0;
             border-radius: 0;
             backdrop-filter: none;
-            border-bottom: 2px solid #444;
+            border-bottom: 2px solid #5a3a7a;
         }
 
         .stat strong {
             display: block;
             font-size: 2em;
-            color: #fff;
+            color: #d8b8e8;
             font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .stat {
+            color: #a8a0c0;
         }
 
         .game-board {
@@ -72,42 +91,75 @@
         }
 
         .card {
-            background: #1a1a1a;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
+            border-radius: 4px;
             padding: 25px;
             min-height: 160px;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(150,100,200,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            border: 1px solid #333;
+            border: 2px solid #3d2a5c;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(150,100,200,0.03) 50%, transparent 100%),
+                linear-gradient(180deg, rgba(150,100,200,0.05) 0%, transparent 50%, rgba(80,40,120,0.05) 100%);
+            pointer-events: none;
         }
 
         .card.face-down {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
-            border: 2px solid #444;
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
+            border: 2px solid #4a3a6a;
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(150,100,200,0.15),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         .card.selected {
             transform: scale(1.02);
-            box-shadow: 0 12px 32px rgba(255,255,255,0.15);
-            border: 2px solid #888;
+            box-shadow: 
+                0 12px 32px rgba(150,100,200,0.25),
+                inset 0 1px 0 rgba(150,100,200,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
+            border: 2px solid #7a5a9a;
+            background: linear-gradient(135deg, #2a1f4e 0%, #1a0f2e 100%);
         }
 
         .card.matched {
-            background: linear-gradient(135deg, #2a3a2a 0%, #1a2a1a 100%);
+            background: linear-gradient(135deg, #1a2a1a 0%, #0f1a0f 100%);
             cursor: default;
-            opacity: 0.6;
-            border: 1px solid #444;
+            opacity: 0.5;
+            border: 2px solid #3a4a3a;
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(100,150,100,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         .card.wrong {
             animation: shake 0.5s;
-            border: 2px solid #8b4444;
+            border: 2px solid #8b5a5a;
+            box-shadow: 
+                0 8px 24px rgba(139,90,90,0.3),
+                inset 0 1px 0 rgba(150,100,100,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         @keyframes shake {
@@ -119,24 +171,30 @@
         .card-content {
             font-size: 0.95em;
             line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
 
         .card-name {
             font-weight: 600;
-            color: #e8e8e8;
+            color: #d8b8e8;
             font-size: 1.15em;
             margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
         }
 
         .card-meaning {
-            color: #b0b0b0;
+            color: #a8a0c0;
             font-size: 0.9em;
             line-height: 1.5;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .card-illustration {
             font-size: 2.8em;
             margin-bottom: 12px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
         }
 
         .controls {
@@ -145,25 +203,30 @@
         }
 
         button {
-            background: #2a2a2a;
-            color: #f5f5f5;
-            border: 1px solid #444;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
+            color: #d8b8e8;
+            border: 2px solid #5a3a7a;
             padding: 14px 32px;
             font-size: 1em;
-            border-radius: 6px;
+            border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 
+                0 4px 12px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(150,100,200,0.1);
             margin: 8px;
             letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-            background: #333;
-            border-color: #666;
+            box-shadow: 
+                0 6px 16px rgba(150,100,200,0.3),
+                inset 0 1px 0 rgba(150,100,200,0.15);
+            background: linear-gradient(135deg, #3a2a5a 0%, #2a1a3a 100%);
+            border-color: #7a5a9a;
         }
 
         button:disabled {
@@ -178,10 +241,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.95);
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            backdrop-filter: blur(2px);
         }
 
         .modal.active {
@@ -189,36 +253,40 @@
         }
 
         .modal-content {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
             padding: 50px;
-            border-radius: 12px;
+            border-radius: 4px;
             max-width: 650px;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-            border: 1px solid #333;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.9),
+                inset 0 1px 0 rgba(150,100,200,0.1);
+            border: 2px solid #5a3a7a;
         }
 
         .modal-content h2 {
-            color: #f5f5f5;
+            color: #e8c8f8;
             margin-bottom: 30px;
             font-size: 2.5em;
             font-weight: 300;
             letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(80,20,120,0.4);
         }
 
         .final-stats {
-            background: #2a2a2a;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 4px;
             margin: 25px 0;
-            border: 1px solid #333;
+            border: 1px solid #5a3a7a;
+            box-shadow: inset 0 1px 0 rgba(150,100,200,0.1);
         }
 
         .final-stats p {
             margin: 12px 0;
             font-size: 1.05em;
-            color: #d0d0d0;
+            color: #c0a8d8;
         }
 
         .missed-pairs {
@@ -226,21 +294,23 @@
         }
 
         .missed-pair {
-            background: #2a2a1a;
+            background: linear-gradient(135deg, #2a1a3a 0%, #1a0f2a 100%);
             padding: 18px;
             margin: 12px 0;
-            border-radius: 6px;
-            border-left: 3px solid #666;
+            border-radius: 4px;
+            border-left: 3px solid #7a5a9a;
+            box-shadow: inset 0 1px 0 rgba(150,100,200,0.05);
         }
 
         .missed-pair-name {
             font-weight: 600;
-            color: #e8e8e8;
+            color: #d8b8e8;
             margin-bottom: 6px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .missed-pair-meaning {
-            color: #a0a0a0;
+            color: #a8a0c0;
             font-size: 0.95em;
             line-height: 1.5;
         }
@@ -251,20 +321,27 @@
         }
 
         .difficulty-selector label {
-            color: #d0d0d0;
+            color: #b8a0d0;
             font-size: 1em;
             margin-right: 12px;
             font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .difficulty-selector select {
             padding: 10px 16px;
             font-size: 1em;
-            border-radius: 6px;
-            border: 1px solid #444;
-            background: #2a2a2a;
-            color: #f5f5f5;
+            border-radius: 4px;
+            border: 2px solid #5a3a7a;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
+            color: #d8b8e8;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .difficulty-selector select:hover {
+            border-color: #7a5a9a;
+            box-shadow: 0 4px 12px rgba(150,100,200,0.2);
         }
 
         @media (max-width: 768px) {
