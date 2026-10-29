@@ -196,6 +196,97 @@
         .hidden {
             display: none;
         }
+
+        .card-illustration {
+            width: 200px;
+            height: 300px;
+            margin: 20px auto;
+            border: 3px solid #9c27b0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-illustration svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .watch-for-section {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .watch-for-section h3 {
+            color: #e65100;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 5px;
+        }
+
+        .watch-for-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .watch-for-list li {
+            color: #333;
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .watch-for-list li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .card-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        .detail-item {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #6a1b9a;
+            font-size: 0.9em;
+        }
+
+        .detail-value {
+            color: #333;
+            margin-top: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .card-details {
+                grid-template-columns: 1fr;
+            }
+
+            .card-illustration {
+                width: 150px;
+                height: 225px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -244,6 +335,108 @@
             return today.toLocaleDateString('en-US', options);
         }
 
+        // Generate a deterministic card illustration based on card name
+        function generateCardIllustration(card) {
+            const seed = card.id || 0;
+            const colors = ['#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#00bcd4', '#009688', '#4caf50', '#ff9800', '#f44336', '#e91e63'];
+            const color1 = colors[seed % colors.length];
+            const color2 = colors[(seed + 1) % colors.length];
+            
+            // Create a unique pattern based on card properties
+            const symbolIndex = seed % 4;
+            const symbols = [
+                // Star symbol
+                `<g opacity="0.3">
+                    <polygon points="100,20 130,90 200,90 145,135 170,205 100,160 30,205 55,135 0,90 70,90" fill="${color1}"/>
+                </g>`,
+                // Circle pattern
+                `<g opacity="0.3">
+                    <circle cx="50" cy="50" r="40" fill="${color1}"/>
+                    <circle cx="150" cy="100" r="35" fill="${color2}"/>
+                    <circle cx="80" cy="150" r="30" fill="${color1}"/>
+                    <circle cx="140" cy="180" r="25" fill="${color2}"/>
+                </g>`,
+                // Wave pattern
+                `<g opacity="0.3">
+                    <path d="M 0 100 Q 25 50, 50 100 T 100 100 T 150 100 T 200 100" stroke="${color1}" stroke-width="3" fill="none"/>
+                    <path d="M 0 150 Q 25 100, 50 150 T 100 150 T 150 150 T 200 150" stroke="${color2}" stroke-width="3" fill="none"/>
+                </g>`,
+                // Diamond pattern
+                `<g opacity="0.3">
+                    <polygon points="100,20 180,100 100,180 20,100" fill="${color1}"/>
+                    <polygon points="100,60 140,100 100,140 60,100" fill="${color2}"/>
+                </g>`
+            ];
+
+            return `
+                <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:${color1};stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:${color2};stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Background -->
+                    <rect width="200" height="300" fill="url(#cardGrad)"/>
+                    
+                    <!-- Pattern -->
+                    ${symbols[symbolIndex]}
+                    
+                    <!-- Border -->
+                    <rect width="200" height="300" fill="none" stroke="white" stroke-width="2"/>
+                    
+                    <!-- Card name text -->
+                    <text x="100" y="280" font-size="12" font-weight="bold" fill="white" text-anchor="middle" font-family="Georgia, serif">
+                        ${card.name.substring(0, 15)}
+                    </text>
+                </svg>
+            `;
+        }
+
+        // Generate watch-fors based on card meaning
+        function generateWatchFors(card, showReversed) {
+            const meaning = showReversed && card.reversed ? card.reversed.meaning : card.upright.meaning;
+            const watchFors = [];
+
+            // Extract key themes from the meaning
+            if (showReversed && card.reversed) {
+                // For reversed cards, create watch-fors from the reversed meaning
+                if (card.reversed.love) watchFors.push(`In love: ${card.reversed.love}`);
+                if (card.reversed.career) watchFors.push(`In career: ${card.reversed.career}`);
+                if (card.reversed.finance) watchFors.push(`With finances: ${card.reversed.finance}`);
+            } else {
+                // For upright cards
+                if (card.upright.love) watchFors.push(`In love: ${card.upright.love}`);
+                if (card.upright.career) watchFors.push(`In career: ${card.upright.career}`);
+                if (card.upright.finance) watchFors.push(`With finances: ${card.upright.finance}`);
+            }
+
+            // If we don't have enough watch-fors, add some from keywords
+            if (watchFors.length < 3 && card.keywords) {
+                const keywordTips = {
+                    'beginnings': 'Be open to new opportunities',
+                    'abundance': 'Recognize blessings around you',
+                    'intuition': 'Trust your inner voice',
+                    'conflict': 'Address tensions directly',
+                    'transformation': 'Embrace change gracefully',
+                    'endings': 'Let go of what no longer serves',
+                    'balance': 'Seek equilibrium in all things',
+                    'creativity': 'Express yourself authentically',
+                    'power': 'Use your influence wisely',
+                    'wisdom': 'Seek counsel from trusted sources'
+                };
+
+                for (let keyword of card.keywords) {
+                    if (keywordTips[keyword] && watchFors.length < 3) {
+                        watchFors.push(keywordTips[keyword]);
+                    }
+                }
+            }
+
+            return watchFors.slice(0, 3); // Return top 3 watch-fors
+        }
+
         // Display the card
         function displayCard(card) {
             const container = document.getElementById('cardContainer');
@@ -251,6 +444,12 @@
             
             const keywordsHTML = card.keywords
                 .map(keyword => `<span class="keyword">${keyword}</span>`)
+                .join('');
+
+            const cardIllustration = generateCardIllustration(card);
+            const watchFors = generateWatchFors(card, showReversed);
+            const watchForsHTML = watchFors
+                .map(watchFor => `<li>${watchFor}</li>`)
                 .join('');
 
             const meaningSection = showReversed && card.reversed && card.reversed.meaning
@@ -267,9 +466,22 @@
                     </div>
                 `;
 
+            const detailsHTML = `
+                <div class="card-details">
+                    ${card.element ? `<div class="detail-item"><div class="detail-label">Element</div><div class="detail-value">${card.element}</div></div>` : ''}
+                    ${card.astrological ? `<div class="detail-item"><div class="detail-label">Astrological</div><div class="detail-value">${card.astrological}</div></div>` : ''}
+                    ${card.yes_no ? `<div class="detail-item"><div class="detail-label">Yes/No</div><div class="detail-value">${card.yes_no}</div></div>` : ''}
+                    ${card.arcana ? `<div class="detail-item"><div class="detail-label">Arcana</div><div class="detail-value">${card.arcana}</div></div>` : ''}
+                </div>
+            `;
+
             container.innerHTML = `
                 <div class="card-display">
                     <div class="card-name">${card.name}</div>
+                    
+                    <div class="card-illustration">
+                        ${cardIllustration}
+                    </div>
                     
                     <div class="card-section">
                         <h3>Keywords</h3>
@@ -279,6 +491,15 @@
                     </div>
 
                     ${meaningSection}
+
+                    <div class="watch-for-section">
+                        <h3>👁️ Watch For Today</h3>
+                        <ul class="watch-for-list">
+                            ${watchForsHTML}
+                        </ul>
+                    </div>
+
+                    ${detailsHTML}
                 </div>
             `;
         }
