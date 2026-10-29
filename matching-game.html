@@ -12,13 +12,20 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            background-image: 
+                linear-gradient(rgba(30, 10, 50, 0.75), rgba(30, 10, 50, 0.75)),
+                url('assets/tarot-background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: #f5f5f5;
         }
 
         .container {
@@ -28,77 +35,131 @@
 
         .header {
             text-align: center;
-            color: white;
-            margin-bottom: 30px;
+            color: #d8b8e8;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 3.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 12px rgba(80,20,120,0.4);
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #e8c8f8;
+        }
+
+        .header p {
+            color: #b8a0d0;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
         }
 
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-bottom: 20px;
-            font-size: 1.2em;
+            gap: 60px;
+            margin-bottom: 30px;
+            font-size: 1em;
         }
 
         .stat {
-            background: rgba(255,255,255,0.2);
-            padding: 10px 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            background: transparent;
+            padding: 15px 0;
+            border-radius: 0;
+            backdrop-filter: none;
+            border-bottom: 2px solid #5a3a7a;
         }
 
         .stat strong {
             display: block;
-            font-size: 1.5em;
+            font-size: 2em;
+            color: #d8b8e8;
+            font-weight: 300;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .stat {
+            color: #a8a0c0;
         }
 
         .game-board {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            min-height: 150px;
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
+            border-radius: 4px;
+            padding: 25px;
+            min-height: 160px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(150,100,200,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            border: 2px solid #3d2a5c;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(150,100,200,0.03) 50%, transparent 100%),
+                linear-gradient(180deg, rgba(150,100,200,0.05) 0%, transparent 50%, rgba(80,40,120,0.05) 100%);
+            pointer-events: none;
         }
 
         .card.face-down {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
+            border: 2px solid #4a3a6a;
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(150,100,200,0.15),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         .card.selected {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255,255,255,0.5);
-            border: 3px solid #ffd700;
+            transform: scale(1.02);
+            box-shadow: 
+                0 12px 32px rgba(150,100,200,0.25),
+                inset 0 1px 0 rgba(150,100,200,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
+            border: 2px solid #7a5a9a;
+            background: linear-gradient(135deg, #2a1f4e 0%, #1a0f2e 100%);
         }
 
         .card.matched {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            background: linear-gradient(135deg, #1a2a1a 0%, #0f1a0f 100%);
             cursor: default;
-            opacity: 0.7;
+            opacity: 0.5;
+            border: 2px solid #3a4a3a;
+            box-shadow: 
+                0 8px 24px rgba(0,0,0,0.7),
+                inset 0 1px 0 rgba(100,150,100,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         .card.wrong {
             animation: shake 0.5s;
-            border: 3px solid #ff4444;
+            border: 2px solid #8b5a5a;
+            box-shadow: 
+                0 8px 24px rgba(139,90,90,0.3),
+                inset 0 1px 0 rgba(150,100,100,0.1),
+                inset 0 -1px 0 rgba(0,0,0,0.5);
         }
 
         @keyframes shake {
@@ -108,24 +169,32 @@
         }
 
         .card-content {
-            font-size: 1em;
-            line-height: 1.4;
+            font-size: 0.95em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
 
         .card-name {
-            font-weight: bold;
-            color: #764ba2;
-            font-size: 1.1em;
+            font-weight: 600;
+            color: #d8b8e8;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
         }
 
         .card-meaning {
-            color: #333;
-            font-size: 0.95em;
+            color: #a8a0c0;
+            font-size: 0.9em;
+            line-height: 1.5;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .card-illustration {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
         }
 
         .controls {
@@ -134,22 +203,30 @@
         }
 
         button {
-            background: white;
-            color: #764ba2;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 25px;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
+            color: #d8b8e8;
+            border: 2px solid #5a3a7a;
+            padding: 14px 32px;
+            font-size: 1em;
+            border-radius: 4px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin: 5px;
+            box-shadow: 
+                0 4px 12px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(150,100,200,0.1);
+            margin: 8px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            box-shadow: 
+                0 6px 16px rgba(150,100,200,0.3),
+                inset 0 1px 0 rgba(150,100,200,0.15);
+            background: linear-gradient(135deg, #3a2a5a 0%, #2a1a3a 100%);
+            border-color: #7a5a9a;
         }
 
         button:disabled {
@@ -164,10 +241,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.95);
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            backdrop-filter: blur(2px);
         }
 
         .modal.active {
@@ -175,75 +253,95 @@
         }
 
         .modal-content {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 600px;
+            background: linear-gradient(135deg, #1a0f2e 0%, #0f0a1a 100%);
+            padding: 50px;
+            border-radius: 4px;
+            max-width: 650px;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.9),
+                inset 0 1px 0 rgba(150,100,200,0.1);
+            border: 2px solid #5a3a7a;
         }
 
         .modal-content h2 {
-            color: #764ba2;
-            margin-bottom: 20px;
-            font-size: 2em;
+            color: #e8c8f8;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(80,20,120,0.4);
         }
 
         .final-stats {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
+            padding: 25px;
+            border-radius: 4px;
+            margin: 25px 0;
+            border: 1px solid #5a3a7a;
+            box-shadow: inset 0 1px 0 rgba(150,100,200,0.1);
         }
 
         .final-stats p {
-            margin: 10px 0;
-            font-size: 1.1em;
+            margin: 12px 0;
+            font-size: 1.05em;
+            color: #c0a8d8;
         }
 
         .missed-pairs {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .missed-pair {
-            background: #fff3cd;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border-left: 4px solid #ffc107;
+            background: linear-gradient(135deg, #2a1a3a 0%, #1a0f2a 100%);
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 4px;
+            border-left: 3px solid #7a5a9a;
+            box-shadow: inset 0 1px 0 rgba(150,100,200,0.05);
         }
 
         .missed-pair-name {
-            font-weight: bold;
-            color: #764ba2;
-            margin-bottom: 5px;
+            font-weight: 600;
+            color: #d8b8e8;
+            margin-bottom: 6px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .missed-pair-meaning {
-            color: #555;
+            color: #a8a0c0;
             font-size: 0.95em;
+            line-height: 1.5;
         }
 
         .difficulty-selector {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .difficulty-selector label {
-            color: white;
-            font-size: 1.1em;
-            margin-right: 10px;
+            color: #b8a0d0;
+            font-size: 1em;
+            margin-right: 12px;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .difficulty-selector select {
-            padding: 8px 15px;
+            padding: 10px 16px;
             font-size: 1em;
-            border-radius: 5px;
-            border: none;
-            background: white;
-            color: #764ba2;
+            border-radius: 4px;
+            border: 2px solid #5a3a7a;
+            background: linear-gradient(135deg, #2a1a4a 0%, #1a0f2a 100%);
+            color: #d8b8e8;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .difficulty-selector select:hover {
+            border-color: #7a5a9a;
+            box-shadow: 0 4px 12px rgba(150,100,200,0.2);
         }
 
         @media (max-width: 768px) {
