@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celtic Cross Spread - Tarot Reading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: #764ba2;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .celtic-cross {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 200px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Celtic Cross Layout */
+        .card-1 { grid-column: 2; grid-row: 2; } /* Present */
+        .card-2 { grid-column: 2; grid-row: 2; transform: rotate(90deg); } /* Challenge */
+        .card-3 { grid-column: 2; grid-row: 1; } /* Conscious */
+        .card-4 { grid-column: 2; grid-row: 3; } /* Subconscious */
+        .card-5 { grid-column: 1; grid-row: 2; } /* Past */
+        .card-6 { grid-column: 3; grid-row: 2; } /* Future */
+        .card-7 { grid-column: 4; grid-row: 4; } /* Self */
+        .card-8 { grid-column: 4; grid-row: 3; } /* Environment */
+        .card-9 { grid-column: 4; grid-row: 2; } /* Hopes/Fears */
+        .card-10 { grid-column: 4; grid-row: 1; } /* Outcome */
+
+        .card-position {
+            text-align: center;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-name {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #764ba2;
+        }
+
+        .card-status {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-status.upright {
+            color: #51cf66;
+        }
+
+        .card-meaning {
+            text-align: left;
+            line-height: 1.5;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        .card-keywords {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+
+        .error {
+            text-align: center;
+            color: #ff6b6b;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .position-guide {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .position-guide h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .position-guide ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .position-guide li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .position-guide li:last-child {
+            border-bottom: none;
+        }
+
+        .position-guide strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 1024px) {
+            .celtic-cross {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1rem;
+            }
+
+            .card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7, .card-8, .card-9, .card-10 {
+                grid-column: 1;
+                grid-row: auto;
+                transform: none !important;
+            }
+
+            .card {
+                min-height: auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Celtic Cross Spread</h1>
+        <p class="subtitle">The Classic 10-Card Tarot Reading</p>
+        
+        <div class="button-container">
+            <button id="drawButton" onclick="drawCards()">Draw Cards</button>
+        </div>
+
+        <div id="content">
+            <div class="loading">Click "Draw Cards" to begin your reading...</div>
+        </div>
+
+        <div class="position-guide">
+            <h2>Celtic Cross Position Meanings</h2>
+            <ul>
+                <li><strong>1. Present:</strong> Your current situation and state of being</li>
+                <li><strong>2. Challenge:</strong> The immediate obstacle or challenge crossing your path</li>
+                <li><strong>3. Conscious:</strong> What you are aware of, your conscious goals</li>
+                <li><strong>4. Subconscious:</strong> Hidden influences, subconscious desires or fears</li>
+                <li><strong>5. Past:</strong> Recent past events that led to this situation</li>
+                <li><strong>6. Future:</strong> What is approaching in the near future</li>
+                <li><strong>7. Self:</strong> Your attitude, how you see yourself in this situation</li>
+                <li><strong>8. Environment:</strong> External influences, how others see you</li>
+                <li><strong>9. Hopes/Fears:</strong> Your hopes and fears about the outcome</li>
+                <li><strong>10. Outcome:</strong> The likely outcome if you continue on this path</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let allCards = [];
+        const positions = [
+            { id: 1, name: 'Present', description: 'Your current situation' },
+            { id: 2, name: 'Challenge', description: 'The obstacle crossing your path' },
+            { id: 3, name: 'Conscious', description: 'What you are aware of' },
+            { id: 4, name: 'Subconscious', description: 'Hidden influences' },
+            { id: 5, name: 'Past', description: 'Recent past events' },
+            { id: 6, name: 'Future', description: 'What is approaching' },
+            { id: 7, name: 'Self', description: 'Your attitude' },
+            { id: 8, name: 'Environment', description: 'External influences' },
+            { id: 9, name: 'Hopes/Fears', description: 'Your hopes and fears' },
+            { id: 10, name: 'Outcome', description: 'The likely outcome' }
+        ];
+
+        // Load card data
+        async function loadCards() {
+            try {
+                const response = await fetch('index.json');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to load card data');
+                }
+
+                const data = await response.json();
+                allCards = data.cards;
+
+                if (!allCards || allCards.length === 0) {
+                    throw new Error('No cards found in data');
+                }
+
+            } catch (error) {
+                document.getElementById('content').innerHTML = `
+                    <div class="error">
+                        <h2>Error Loading Cards</h2>
+                        <p>${error.message}</p>
+                        <p>Please make sure index.json is in the same directory.</p>
+                    </div>
+                `;
+                document.getElementById('drawButton').disabled = true;
+            }
+        }
+
+        // Get random cards without replacement
+        function getRandomCards(count) {
+            const shuffled = [...allCards].sort(() => Math.random() - 0.5);
+            return shuffled.slice(0, count);
+        }
+
+        // Determine if card is reversed (50% chance)
+        function isReversed() {
+            return Math.random() < 0.5;
+        }
+
+        // Draw 10 cards for Celtic Cross
+        function drawCards() {
+            if (allCards.length === 0) {
+                return;
+            }
+
+            const selectedCards = getRandomCards(10);
+            let html = '<div class="celtic-cross">';
+
+            selectedCards.forEach((card, index) => {
+                const position = positions[index];
+                const reversed = isReversed();
+                const meaning = reversed ? card.reversed.meaning : card.upright.meaning;
+                const keywords = card.keywords.slice(0, 3).join(', ');
+
+                html += `
+                    <div class="card card-${position.id}">
+                        <div class="card-position">${position.id}. ${position.name}</div>
+                        <div class="card-name">${card.name}</div>
+                        <div class="card-status ${reversed ? 'reversed' : 'upright'}">
+                            ${reversed ? '↓ Reversed' : '↑ Upright'}
+                        </div>
+                        <div class="card-keywords">${keywords}</div>
+                        <div class="card-meaning">${meaning}</div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            document.getElementById('content').innerHTML = html;
+        }
+
+        // Load cards on page load
+        loadCards();
+    </script>
+</body>
+</html>
